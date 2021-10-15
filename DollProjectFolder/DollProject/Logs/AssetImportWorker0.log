@@ -1,0 +1,291 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.0f1 (c7b5465681fb) revision 13088070'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Education; OS build 19041.1288; Version 2004; 64bit' Language: 'ko' Physical Memory: 8109 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\UnityEditor\2020.3.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/GithubDesktop/DollHouse/DollProjectFolder/DollProject
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+58624
+Successfully changed project path to: C:/GithubDesktop/DollHouse/DollProjectFolder/DollProject
+C:/GithubDesktop/DollHouse/DollProjectFolder/DollProject
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 43.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.0f1 (c7b5465681fb)
+[Subsystems] Discovering subsystems at path C:/UnityEditor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/GithubDesktop/DollHouse/DollProjectFolder/DollProject/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c8c)
+    Vendor:   
+    VRAM:     1979 MB
+    Driver:   24.21.13.9901
+Initialize mono
+Mono path[0] = 'C:/UnityEditor/2020.3.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/UnityEditor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/UnityEditor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56256
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/UnityEditor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003844 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 41.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.473 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001875 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 43.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.196 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1806 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.1 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2248.
+Total: 2.643700 ms (FindLiveObjects: 0.363000 ms CreateObjectMapping: 0.147600 ms MarkObjects: 1.991600 ms  DeleteObjects: 0.140100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42baae205c97e3337697759514652acd') in 0.011663 seconds
+  Import took 0.015873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.547500 seconds.
+  path: Assets/Sprites
+  artifactKey: Guid(67bf76fcb7cbc524d88dba3b47e58d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites using Guid(67bf76fcb7cbc524d88dba3b47e58d32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed1a61d7d2d83dce439498a7af43752b') in 0.013300 seconds
+  Import took 0.017171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.888935 seconds.
+  path: Assets/Sprites/Dumy
+  artifactKey: Guid(66880923d2946ef4596f44520d9a7b3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy using Guid(66880923d2946ef4596f44520d9a7b3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98abd6c18c16ead95bd2a36dbb87924b') in 0.011726 seconds
+  Import took 0.016417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.600456 seconds.
+  path: Assets/Sprites/Dumy/doll.png
+  artifactKey: Guid(a42c94c8ebc49b242a322adc3cad034b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/doll.png using Guid(a42c94c8ebc49b242a322adc3cad034b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49c17a37e677075bc7a76833c82e6f53') in 0.220911 seconds
+  Import took 0.228081 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.957491 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4277dab6a28e8e1d23739f05f438b540') in 0.011240 seconds
+  Import took 0.015534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.980998 seconds.
+  path: Assets/Scenes/SanghunScenen.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SanghunScenen.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ea474a69dce4a43c6328773645612c0') in 0.012951 seconds
+  Import took 0.017315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.915747 seconds.
+  path: Assets/Scenes/SanghunScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SanghunScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b96ebb143d054790110a6a5e3534c08a') in 0.011668 seconds
+  Import took 0.016418 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 73.843380 seconds.
+  path: Assets/Sprites/Dumy/pillar.png
+  artifactKey: Guid(2e1659de2cd5f784f9ce1765d038c8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/pillar.png using Guid(2e1659de2cd5f784f9ce1765d038c8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbc8a34f73b8184fa2f87a0951dfed8a') in 0.021153 seconds
+  Import took 0.026348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.169088 seconds.
+  path: Assets/Sprites/Dumy/Snare.png
+  artifactKey: Guid(e78eae2353fcfda4b9cc13caa82a1fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/Snare.png using Guid(e78eae2353fcfda4b9cc13caa82a1fa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ee2966c1b0f5f1dbba25b63c223c4de') in 0.022225 seconds
+  Import took 0.025954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 50.613681 seconds.
+  path: Assets/Sprites/Dumy/television.png
+  artifactKey: Guid(4400e9851e17f844a9b3b70b0bd5d077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/television.png using Guid(4400e9851e17f844a9b3b70b0bd5d077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d29420420b49619e43ee4c5cb30f471') in 0.026295 seconds
+  Import took 0.030732 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 61.909017 seconds.
+  path: Assets/Sprites/Dumy/couch.png
+  artifactKey: Guid(bec9976dd7bdcda449ef7fdc60269a12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/couch.png using Guid(bec9976dd7bdcda449ef7fdc60269a12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47a9cfe37dab031f297671cfb31d870c') in 0.021094 seconds
+  Import took 0.025379 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 230.433531 seconds.
+  path: Assets/Sprites/Dumy/desk.jpg
+  artifactKey: Guid(df6ffa1cb350a1a44a899f372b8dbdcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/desk.jpg using Guid(df6ffa1cb350a1a44a899f372b8dbdcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34a5d15cbffab4dd08a25e29ff5fd3da') in 0.030257 seconds
+  Import took 0.033979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.388337 seconds.
+  path: Assets/Sprites/Dumy/desk.png
+  artifactKey: Guid(5387057e07d0f174b9fa7757c626ccbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/desk.png using Guid(5387057e07d0f174b9fa7757c626ccbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e66e571b8839228350688177d0640492') in 0.024844 seconds
+  Import took 0.030000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 62.323231 seconds.
+  path: Assets/Sprites/Dumy/door.png
+  artifactKey: Guid(8e22634165988f4489c09a9290b192a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/door.png using Guid(8e22634165988f4489c09a9290b192a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57b28da882c46072d484f929c3ab1fb0') in 0.024404 seconds
+  Import took 0.028862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 86.769150 seconds.
+  path: Assets/Sprites/Dumy/bookCloset.png
+  artifactKey: Guid(aa2467ae3e0eb9546bedf61c60919d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/bookCloset.png using Guid(aa2467ae3e0eb9546bedf61c60919d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3551e68e9c4039f38bda9fc6b32bec50') in 0.021676 seconds
+  Import took 0.025583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.906995 seconds.
+  path: Assets/Sprites/Dumy/dogMeal.png
+  artifactKey: Guid(ba32b4fae6233b24190371bfaa54ec63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/dogMeal.png using Guid(ba32b4fae6233b24190371bfaa54ec63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fe00d4b3a33c6a808fa3dd1c2fdf01a') in 0.021231 seconds
+  Import took 0.027299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 62.432578 seconds.
+  path: Assets/Sprites/Dumy/parent.png
+  artifactKey: Guid(b7dcbf3f30d92084a92694ec816de13a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/parent.png using Guid(b7dcbf3f30d92084a92694ec816de13a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01a7bb0ab0bd20d3dbb6ee9f9453c27b') in 0.021021 seconds
+  Import took 0.025267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.072618 seconds.
+  path: Assets/Sprites/Dumy/chair.png
+  artifactKey: Guid(4d1224367261be64d9c41e50fdb9beb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/chair.png using Guid(4d1224367261be64d9c41e50fdb9beb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '651f811e2b9f4fdf8e16875bacada9fe') in 0.034030 seconds
+  Import took 0.041121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 79.789669 seconds.
+  path: Assets/Sprites/Dumy/상호작용.png
+  artifactKey: Guid(9ac33824bc2712d408914712148962c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/상호작용.png using Guid(9ac33824bc2712d408914712148962c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d834e0c2c648e2e42cf001d259bc1e7') in 0.021432 seconds
+  Import took 0.025049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 456.553248 seconds.
+  path: Assets/Sprites/Dumy/벽지.jpg
+  artifactKey: Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/벽지.jpg using Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99c5d90921fda26e70c3cd5642fa2f47') in 0.029053 seconds
+  Import took 0.034334 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 279.708157 seconds.
+  path: Assets/Sprites/Dumy/벽지.jpg
+  artifactKey: Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/벽지.jpg using Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd61ff48beebe109b75d32e443750284e') in 0.019294 seconds
+  Import took 0.024187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012161 seconds.
+  path: Assets/Sprites/Dumy/벽지.jpg
+  artifactKey: Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/벽지.jpg using Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd61ff48beebe109b75d32e443750284e') in 0.017259 seconds
+  Import took 0.022263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.988022 seconds.
+  path: Assets/Sprites/Dumy/벽지.jpg
+  artifactKey: Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/벽지.jpg using Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e73d3b81c9adac3af7e974135c57892e') in 0.022693 seconds
+  Import took 0.026945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007510 seconds.
+  path: Assets/Sprites/Dumy/벽지.jpg
+  artifactKey: Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/벽지.jpg using Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e73d3b81c9adac3af7e974135c57892e') in 0.020379 seconds
+  Import took 0.024527 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.162678 seconds.
+  path: Assets/Sprites/Dumy/벽지.jpg
+  artifactKey: Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/벽지.jpg using Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea7e6ff3c81c0af63669c849bcf69a5a') in 0.020830 seconds
+  Import took 0.024860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009523 seconds.
+  path: Assets/Sprites/Dumy/벽지.jpg
+  artifactKey: Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/벽지.jpg using Guid(e0e06c77c4914474890e696bd0223eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea7e6ff3c81c0af63669c849bcf69a5a') in 0.020283 seconds
+  Import took 0.024546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10305.895372 seconds.
+  path: Assets/Sprites/Dumy/note.png
+  artifactKey: Guid(b995803c67c6c4641a0cc40d675b2d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Dumy/note.png using Guid(b995803c67c6c4641a0cc40d675b2d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d42ef134b7cd7cbca66be1e3498e582') in 0.052984 seconds
+  Import took 0.057497 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
