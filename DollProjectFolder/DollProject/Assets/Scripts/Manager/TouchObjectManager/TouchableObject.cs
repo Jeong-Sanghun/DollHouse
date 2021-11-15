@@ -24,5 +24,6 @@ public class TouchableObject : MonoBehaviour
     public virtual void OnTouch()
     {
         //공통내용이 있으면 여기다 써준다. 사운드가 통 하고 튄다던지 하는거.
+        mainSceneManager.energyPoint--;
     }
 }

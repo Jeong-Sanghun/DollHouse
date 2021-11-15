@@ -28,15 +28,19 @@ public class MainSceneManager : MonoBehaviour
     //왼쪽 -0.43 오른쪽 8
     float playerMoveTimer = 2;
 
+    // 활동력 매일 2로 초기화 시켜준다
+    public int energyPoint = 2;
+    bool isParentAppear = false;
     //부모님이 등장하는 타이머. 초기값 30.
-    float parentAppearTimer = 30;
+    //float parentAppearTimer = 30;
 
     bool isGameOver;
     void Start()
     {
+        parentObject.SetActive(false);
         watchingTV = false;
         isGameOver = false;
-        StartCoroutine(ParentAppearCoroutine());
+        //StartCoroutine(ParentAppearCoroutine());
     }
 
 
@@ -60,24 +64,24 @@ public class MainSceneManager : MonoBehaviour
         }
     }
 
-    IEnumerator ParentAppearCoroutine()
-    {
-        parentObject.SetActive(false);
-        while (parentAppearTimer > 0)
-        {
-            parentAppearTimer -= Time.deltaTime;
-            yield return null;
-        }
-        if (!isGameOver)
-        {
-            parentObject.SetActive(true);
-            if (ParentChecker())
-            {
-                ParentGetAngry();
-            }
-        }
+    //IEnumerator ParentAppearCoroutine()
+    //{
+    //    parentObject.SetActive(false);
+    //    while (parentAppearTimer > 0)
+    //    {
+    //        parentAppearTimer -= Time.deltaTime;
+    //        yield return null;
+    //    }
+    //    if (!isGameOver)
+    //    {
+    //        parentObject.SetActive(true);
+    //        if (ParentChecker())
+    //        {
+    //            ParentGetAngry();
+    //        }
+    //    }
 
-    }
+    //}
     void TouchMoveSetting(float mousePosX)
     {
         if (mousePosX > 8)
@@ -112,7 +116,7 @@ public class MainSceneManager : MonoBehaviour
             {
                 return;
             }
-            if (parentAppearTimer<0)
+            if (isParentAppear)
             {
                 ParentGetAngry();
             }
@@ -141,6 +145,11 @@ public class MainSceneManager : MonoBehaviour
             {
                 TouchMoveSetting(mousePos.x);
             }
+
+            if (energyPoint <= 0)
+            {
+                parentObject.SetActive(true);
+            }
         }
 
         //이동
@@ -159,10 +168,6 @@ public class MainSceneManager : MonoBehaviour
     public void TurnOnTV()
     {
         watchingTV = !watchingTV;
-        if (watchingTV == true && parentAppearTimer > 5)
-        {
-            parentAppearTimer = 5;
-        }
     }
     public void GameOver()
     {
