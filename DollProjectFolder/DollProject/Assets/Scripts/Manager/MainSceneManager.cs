@@ -35,12 +35,18 @@ public class MainSceneManager : MonoBehaviour
     //float parentAppearTimer = 30;
 
     bool isGameOver;
+
+    public DialogParsing dialogParser;
+    public DialogList dialogList;
     void Start()
     {
         parentObject.SetActive(false);
         watchingTV = false;
         isGameOver = false;
         //StartCoroutine(ParentAppearCoroutine());
+
+        dialogParser = new DialogParsing();
+        dialogList = dialogParser.StoryParse("RandDialog1");
     }
 
 
