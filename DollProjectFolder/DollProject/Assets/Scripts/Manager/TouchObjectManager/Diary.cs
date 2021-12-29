@@ -14,5 +14,6 @@ public class Diary : TouchableObject
         base.OnTouch();
         //다이어리가 켜져있으면 꺼주고, 꺼져있으면 켜준다.
         diaryObject.SetActive(!diaryObject.activeSelf);
+        mainSceneManager.energyPoint--;
     }
 }

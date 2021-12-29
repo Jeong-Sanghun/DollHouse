@@ -11,10 +11,6 @@ public class DialogParsing
         Parent,
         Child
     }
-    void Start()
-    {
-        
-    }
 
     public DialogList StoryParse(string dialogName)
     {
@@ -82,6 +78,20 @@ public class DialogParsing
                     break;
             }
         }
+
+        if (nowState == DialogState.Parent)
+        {
+            curText = builder.ToString();
+            builder.Clear();
+            dialogList.parentsDialogList.Add(curText);
+        }
+        else if (nowState == DialogState.Child)
+        {
+            curText = builder.ToString();
+            builder.Clear();
+            dialogList.childDialogList.Add(curText);
+        }
+
         return dialogList;
     }
 

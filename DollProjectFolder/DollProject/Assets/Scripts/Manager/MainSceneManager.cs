@@ -15,8 +15,8 @@ public class MainSceneManager : MonoBehaviour
     Transform playerTransform;
 
     //텔레비전에서 바꿔줄 변수.
-    bool watchingTV;
-    bool isExpressioning;
+    public bool watchingTV;
+    public bool isExpressioning;
 
     GameObject touchedObject;               //터치한 오브젝트
     RaycastHit2D hit;                         //터치를 위한 raycastHit
@@ -30,14 +30,17 @@ public class MainSceneManager : MonoBehaviour
 
     // 활동력 매일 2로 초기화 시켜준다
     public int energyPoint = 2;
+    public int exprLevel = 0;
     bool isParentAppear = false;
     //부모님이 등장하는 타이머. 초기값 30.
     //float parentAppearTimer = 30;
 
     bool isGameOver;
 
-    public DialogParsing dialogParser;
-    public DialogList dialogList;
+    [SerializeField]
+    GameObject dialogManagerObj;
+
+
     void Start()
     {
         parentObject.SetActive(false);
@@ -45,11 +48,9 @@ public class MainSceneManager : MonoBehaviour
         isGameOver = false;
         //StartCoroutine(ParentAppearCoroutine());
 
-        dialogParser = new DialogParsing();
-        dialogList = dialogParser.StoryParse("RandDialog1");
+        DialogManager dialogManager =  dialogManagerObj.GetComponent<DialogManager>();
+        dialogManager.randDialog(1);
     }
-
-
 
     void ParentGetAngry()
     {

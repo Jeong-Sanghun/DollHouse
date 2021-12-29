@@ -7,16 +7,6 @@ public class DialogList
     public List<string> parentsDialogList;
     public List<string> childDialogList;
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public DialogList()
     {
         parentsDialogList = new List<string>();
