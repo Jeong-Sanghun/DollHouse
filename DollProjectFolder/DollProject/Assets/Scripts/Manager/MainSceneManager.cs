@@ -18,6 +18,13 @@ public class MainSceneManager : MonoBehaviour
     public bool watchingTV;
     public bool isExpressioning;
 
+    //다이어리에서 바꿔줄 변수.ㅎㅎ
+    public bool openDiary;
+    public bool isOpenDiary;
+
+    public bool openEmptyDiary;
+    public bool isOpenEmptyDiary;
+
     GameObject touchedObject;               //터치한 오브젝트
     RaycastHit2D hit;                         //터치를 위한 raycastHit
     [SerializeField]
@@ -46,9 +53,15 @@ public class MainSceneManager : MonoBehaviour
         parentObject.SetActive(false);
         watchingTV = false;
         isGameOver = false;
+        //ㅎㅎ
+        openDiary = false;
+        isOpenDiary = false;
+
+        openEmptyDiary = false;
+        isOpenEmptyDiary = false;
         //StartCoroutine(ParentAppearCoroutine());
 
-        DialogManager dialogManager =  dialogManagerObj.GetComponent<DialogManager>();
+        DialogManager dialogManager = dialogManagerObj.GetComponent<DialogManager>();
         dialogManager.randDialog(1);
     }
 
@@ -61,7 +74,7 @@ public class MainSceneManager : MonoBehaviour
 
     bool ParentChecker()
     {
-        if(watchingTV || playerMoveTimer < 1 || isExpressioning)
+        if (watchingTV || playerMoveTimer < 1 || isExpressioning)
         {
             return true;
         }
@@ -111,7 +124,7 @@ public class MainSceneManager : MonoBehaviour
             playerTransform.localEulerAngles = Vector3.zero;
         }
     }
-    
+
 
 
     void Update()
@@ -119,7 +132,7 @@ public class MainSceneManager : MonoBehaviour
         //암데나 터치했을 때.
         if (Input.GetMouseButtonDown(0))
         {
-            if(isExpressioning || isGameOver)
+            if (isExpressioning || isGameOver)
             {
                 return;
             }
@@ -135,7 +148,7 @@ public class MainSceneManager : MonoBehaviour
                 if (touchedObject.CompareTag("touchable"))
                 {
                     //거리가 1 아래일경우
-                    if(Mathf.Abs(touchedObject.transform.position.x - playerTransform.position.x) < 1)
+                    if (Mathf.Abs(touchedObject.transform.position.x - playerTransform.position.x) < 1)
                     {
                         //이게 섹시포인트다.
                         //이러면 touchableObject의 onTouch가 아니라
@@ -160,7 +173,7 @@ public class MainSceneManager : MonoBehaviour
         }
 
         //이동
-        if(playerMoveTimer < 1)
+        if (playerMoveTimer < 1)
         {
             playerMoveTimer += Time.deltaTime;
             playerTransform.position = Vector3.Lerp(playerOriginPos, playerMovePos, playerMoveTimer);
@@ -176,6 +189,18 @@ public class MainSceneManager : MonoBehaviour
     {
         watchingTV = !watchingTV;
     }
+
+    //ㅎㅎ
+    public void OpenTheDiary()
+    {
+        openDiary = !openDiary;
+    }
+
+    public void OpenTheEmptyDiary()
+    {
+        openEmptyDiary = !openEmptyDiary;
+    }
+
     public void GameOver()
     {
         isGameOver = true;
