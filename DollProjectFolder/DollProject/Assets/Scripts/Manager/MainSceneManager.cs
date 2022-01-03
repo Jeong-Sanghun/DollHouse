@@ -30,8 +30,10 @@ public class MainSceneManager : MonoBehaviour
     [SerializeField]
     Camera cam;                      //레이캐스트를 위한 카메라.
 
-    Vector3 playerOriginPos;
-    Vector3 playerMovePos;
+    Vector3 startPosition;
+    Vector3 laterPosition;
+    bool isMovingRight;
+    bool isMoving;
     //왼쪽 -0.43 오른쪽 8
     float playerMoveTimer = 2;
 
@@ -56,6 +58,8 @@ public class MainSceneManager : MonoBehaviour
         //ㅎㅎ
         openDiary = false;
         isOpenDiary = false;
+        isMoving = false;
+        isMovingRight = false;
 
         openEmptyDiary = false;
         isOpenEmptyDiary = false;
@@ -102,30 +106,67 @@ public class MainSceneManager : MonoBehaviour
     //    }
 
     //}
-    void TouchMoveSetting(float mousePosX)
+    void CharacterPosition(float x)
     {
-        if (mousePosX > 8)
+        startPosition = playerTransform.position;
+        laterPosition = new Vector3(x, startPosition.y, startPosition.z);
+        isMoving = true;
+        if (startPosition.x > laterPosition.x)
         {
-            mousePosX = 8;
+            isMovingRight = false;
         }
-        else if (mousePosX < -0.43f)
+        else
         {
-            mousePosX = 0.43f;
+            isMovingRight = true;
         }
-        playerMoveTimer = 0;
-        playerOriginPos = playerTransform.position;
-        playerMovePos = new Vector3(mousePosX, playerOriginPos.y, playerOriginPos.z);
-        if (playerTransform.localEulerAngles.y == 0 && playerMovePos.x > playerOriginPos.x)
+
+        if (playerTransform.localEulerAngles.y == 180 && isMovingRight == false)
+        {
+            playerTransform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        if (playerTransform.localEulerAngles.y == 0 && isMovingRight == true)
         {
             playerTransform.localEulerAngles = new Vector3(0, 180, 0);
         }
-        else if (playerTransform.localEulerAngles.y == 180 && playerMovePos.x < playerOriginPos.x)
-        {
-            playerTransform.localEulerAngles = Vector3.zero;
-        }
+
+
     }
 
+    void CharacterMove()
+    {
+        if (isMoving == false)
+        {
+            return;
+        }
 
+        float speed = 5 * Time.deltaTime;
+        Vector3 position;
+        position = playerTransform.position;
+        if (isMovingRight)
+        {
+            if (playerTransform.position.x > laterPosition.x)
+            {
+                isMoving = false;
+                playerTransform.position = laterPosition;
+            }
+            else
+            {
+                playerTransform.transform.position = new Vector3(position.x + speed, position.y, position.z);
+            }
+        }
+        else
+        {
+            if (playerTransform.position.x < laterPosition.x)
+            {
+                isMoving = false;
+                playerTransform.position = laterPosition;
+            }
+            else
+            {
+                playerTransform.transform.position = new Vector3(position.x - speed, position.y, position.z);
+            }
+        }
+    }
 
     void Update()
     {
@@ -143,7 +184,7 @@ public class MainSceneManager : MonoBehaviour
             Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition); //마우스 좌클릭으로 마우스의 위치에서 Ray를 쏘아 오브젝트를 감지
             if (hit = Physics2D.Raycast(mousePos, Vector2.zero))
             {
-                //터치된 오브젝트.
+                //터치된 오브젝트
                 touchedObject = hit.collider.gameObject; //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
                 if (touchedObject.CompareTag("touchable"))
                 {
@@ -157,13 +198,13 @@ public class MainSceneManager : MonoBehaviour
                     }
                     else
                     {
-                        TouchMoveSetting(mousePos.x);
+                        CharacterPosition(mousePos.x); //x좌표
                     }
                 }
             }
             else
             {
-                TouchMoveSetting(mousePos.x);
+                CharacterPosition(mousePos.x);
             }
 
             if (energyPoint <= 0)
@@ -172,13 +213,10 @@ public class MainSceneManager : MonoBehaviour
             }
         }
 
-        //이동
-        if (playerMoveTimer < 1)
-        {
-            playerMoveTimer += Time.deltaTime;
-            playerTransform.position = Vector3.Lerp(playerOriginPos, playerMovePos, playerMoveTimer);
-        }
-        
+        CharacterMove();
+
+
+
     }
 
     //Television스크립트에서 불러옴.
@@ -214,5 +252,5 @@ public class MainSceneManager : MonoBehaviour
         GameManager.singleTon.saveData.smartLevel = exprLevel;
     }
 
-    
+
 }
