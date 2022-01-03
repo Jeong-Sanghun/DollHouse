@@ -23,7 +23,7 @@ public class DialogManager : MonoBehaviour
         
     }
 
-    public void randDialog(int exprLevel)
+    public void RandDialog(int exprLevel)
     {
         int randNum = Random.Range(1, 4);
         dialogList = dialogParser.StoryParse("RandDialog" + exprLevel + "-" + randNum);

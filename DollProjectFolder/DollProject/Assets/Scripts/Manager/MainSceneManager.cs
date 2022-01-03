@@ -62,7 +62,7 @@ public class MainSceneManager : MonoBehaviour
         //StartCoroutine(ParentAppearCoroutine());
 
         DialogManager dialogManager = dialogManagerObj.GetComponent<DialogManager>();
-        dialogManager.randDialog(1);
+        dialogManager.RandDialog(1);
     }
 
     void ParentGetAngry()
@@ -178,11 +178,8 @@ public class MainSceneManager : MonoBehaviour
             playerMoveTimer += Time.deltaTime;
             playerTransform.position = Vector3.Lerp(playerOriginPos, playerMovePos, playerMoveTimer);
         }
-
-
-
+        
     }
-
 
     //Television스크립트에서 불러옴.
     public void TurnOnTV()
@@ -210,4 +207,12 @@ public class MainSceneManager : MonoBehaviour
     {
         isExpressioning = !isExpressioning;
     }
+
+    public void Equalize()
+    {
+        GameManager.singleTon.saveData.active = energyPoint;
+        GameManager.singleTon.saveData.smartLevel = exprLevel;
+    }
+
+    
 }

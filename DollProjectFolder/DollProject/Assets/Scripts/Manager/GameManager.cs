@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager singleTon;
     public SaveDataClass saveData;
 
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -25,7 +26,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         saveData = JsonManager.LoadSaveData();
-        
     }
 
     // Update is called once per frame

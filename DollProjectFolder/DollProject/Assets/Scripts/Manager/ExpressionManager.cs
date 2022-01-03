@@ -11,9 +11,13 @@ public class ExpressionManager : MonoBehaviour
     [SerializeField]
     AudioClip[] cryLevel;
 
+    [SerializeField]
+    GameObject parentObject;
+
     public void ChangeCryingSound()
     {
-        GameManager.singleTon.saveData
+        int level = GameManager.singleTon.saveData.smartLevel;
+        cry.clip = cryLevel[level];
     }
 
     private void Start()
@@ -39,8 +43,11 @@ public class ExpressionManager : MonoBehaviour
                 {
                     Debug.Log(touchedObject.name);
                     cry.Play();
+                    parentObject.SetActive(true);
                 }
             }
         }
     }
+    
+
 }

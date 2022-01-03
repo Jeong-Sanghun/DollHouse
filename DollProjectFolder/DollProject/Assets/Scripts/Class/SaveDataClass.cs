@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SaveDataClass
 {
-    int active;
-    bool tvPower;
-    int smartLevel;
-    int currentConversationLevel;
+    public int active;
+    public bool tvPower;
+    public int smartLevel;
+    public int currentConversationLevel;
 
     public SaveDataClass() //시작할때 생성자
     {

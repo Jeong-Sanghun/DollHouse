@@ -39,6 +39,7 @@ public class Television : TouchableObject
                     Debug.Log("5ÃÊ °æ°ú");
                     mainSceneManager.energyPoint--;
                     mainSceneManager.exprLevel++;
+                    mainSceneManager.Equalize();
                 }
                 yield return null;
             }
@@ -54,5 +55,4 @@ public class Television : TouchableObject
             }
         }
     }
-
 }
