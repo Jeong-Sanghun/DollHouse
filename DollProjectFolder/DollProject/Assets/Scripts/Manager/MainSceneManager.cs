@@ -61,8 +61,8 @@ public class MainSceneManager : MonoBehaviour
         isOpenEmptyDiary = false;
         //StartCoroutine(ParentAppearCoroutine());
 
-        DialogManager dialogManager = dialogManagerObj.GetComponent<DialogManager>();
-        dialogManager.RandDialog(1);
+        //DialogManager dialogManager = dialogManagerObj.GetComponent<DialogManager>();
+        //dialogManager.RandDialog(1);
     }
 
     void ParentGetAngry()

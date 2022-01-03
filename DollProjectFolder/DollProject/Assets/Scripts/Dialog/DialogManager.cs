@@ -8,13 +8,14 @@ public class DialogManager : MonoBehaviour
 
     public DialogParsing dialogParser;
     public DialogList dialogList;
-
     public List<char> symbols;
+    public int mainStroyNum;
 
     // Start is called before the first frame update
     void Start()
     {
         dialogParser = new DialogParsing();
+        mainStroyNum = 1;
     }
 
     // Update is called once per frame
@@ -96,5 +97,10 @@ public class DialogManager : MonoBehaviour
                 Debug.Log("3단계는 랜덤 대화가 아닌데 이게 뜨면 망한거임 ㅅㄱ");
                 break;
         }
+    }
+    public void MainDialog(int dialogNo)
+    {
+        dialogList = dialogParser.StoryParse("MainDialog" + dialogNo);
+        mainStroyNum++;
     }
 }

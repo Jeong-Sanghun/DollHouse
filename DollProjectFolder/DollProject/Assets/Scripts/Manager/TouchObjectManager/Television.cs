@@ -6,32 +6,46 @@ public class Television : TouchableObject
 {
     [SerializeField]
     GameObject televisionLightObject;
-    bool isCoroutineOn = false;
+    [SerializeField]
+    AudioSource tvSound;
+    [SerializeField]
+    AudioClip[] tvSoundArray;
     public override void OnTouch()
     {
         base.OnTouch();
         //라이트가 켜져있나 꺼져있나. 
-        
-        televisionLightObject.SetActive(!televisionLightObject.activeSelf);
-        mainSceneManager.TurnOnTV();
-        if (mainSceneManager.watchingTV)
+        if (mainSceneManager.energyPoint > 0)
         {
-            StartCoroutine(WatchingTVCor());
-            Debug.Log("코루틴 시작");
+            televisionLightObject.SetActive(!televisionLightObject.activeSelf);
+            if (televisionLightObject.activeSelf)
+            {
+                StartCoroutine(WatchingTVCor());
+            }
+            else
+            {
+                tvSound.Stop();
+            }
         }
+
     }
     IEnumerator WatchingTVCor()
     {
-        if (!isCoroutineOn)
+        if (!mainSceneManager.watchingTV)
         {
-            isCoroutineOn = true;
+            if (!tvSound.isPlaying)
+            {
+                tvSound.clip = tvSoundArray[Random.Range(0, 5)];
+                tvSound.Play();
+            }
+            mainSceneManager.watchingTV = true;
             float timer = 0;
+
             while (timer < 5f)
             {
                 timer += Time.deltaTime;
-                if (!mainSceneManager.watchingTV)
+                if (!televisionLightObject.activeSelf)
                 {
-                    isCoroutineOn = false;
+                    mainSceneManager.watchingTV = false;
                     yield break;
                 }
                 if (timer >= 5f)
@@ -45,12 +59,14 @@ public class Television : TouchableObject
             }
             if (mainSceneManager.energyPoint > 0)
             {
-                isCoroutineOn = false;
+                mainSceneManager.watchingTV = false;
                 StartCoroutine(WatchingTVCor());
             }
             else
             {
-                isCoroutineOn = false;
+                mainSceneManager.watchingTV = false;
+                tvSound.Stop();
+                televisionLightObject.SetActive(false);
                 yield break;
             }
         }

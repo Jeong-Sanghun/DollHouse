@@ -24,6 +24,15 @@ public class DialogParsing
         string curText;
         StringBuilder builder = new StringBuilder();
 
+        if (originalDialog[0] == '$')
+        {
+            dialogList.isParentStart = true;
+        }
+        else
+        {
+            dialogList.isParentStart = false;
+        }
+
         for (int i= 0; i < originalDialog.Length; i++)
         {
             switch (originalDialog[i])

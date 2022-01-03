@@ -15,7 +15,7 @@ public class JsonManager
     }
 
 
-    public void SaveJson(SaveDataClass saveData)
+    public static void SaveJson(SaveDataClass saveData)
     {
         string jsonText;
 

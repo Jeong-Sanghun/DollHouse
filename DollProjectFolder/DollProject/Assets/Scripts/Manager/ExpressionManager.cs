@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ExpressionManager : MonoBehaviour
 {
@@ -14,6 +15,19 @@ public class ExpressionManager : MonoBehaviour
     [SerializeField]
     GameObject parentObject;
 
+    [SerializeField]
+    GameObject parentTextBalloon;
+    [SerializeField]
+    GameObject parentText;
+    [SerializeField]
+    GameObject childTextBalloon;
+    [SerializeField]
+    GameObject childText;
+    [SerializeField]
+    DialogManager dialogManager;
+    [SerializeField]
+    MainSceneManager mainSceneManager;
+
     public void ChangeCryingSound()
     {
         int level = GameManager.singleTon.saveData.smartLevel;
@@ -24,6 +38,81 @@ public class ExpressionManager : MonoBehaviour
     {
         cry = GetComponent<AudioSource>();
     }
+
+    IEnumerator ExpressionCor()
+    {
+        if (mainSceneManager.exprLevel == 3)
+        {
+            // 메인 스토리 진행
+            if (dialogManager.mainStroyNum == 8)
+            {
+                Debug.Log("게임 오버");
+                yield break;
+            }
+            else
+                dialogManager.MainDialog(dialogManager.mainStroyNum);  
+        }
+        else
+        {
+            // 랜덤 대화 진행
+            dialogManager.RandDialog(mainSceneManager.exprLevel);
+        }
+        int dialogTextNum = dialogManager.dialogList.childDialogList.Count + dialogManager.dialogList.parentsDialogList.Count;
+        int i = 0;
+        while (dialogTextNum > 0)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (dialogManager.dialogList.isParentStart) // 엄마 대화 먼저 시작 i가 짝수이면 엄마대화 홀수이면 자식대화
+                {
+                    if (i % 2 == 0) // 엄마 대화 출력
+                    {
+                        childTextBalloon.SetActive(false);
+                        parentTextBalloon.SetActive(true);
+                        parentText.GetComponent<Text>().text = dialogManager.dialogList.parentsDialogList[i / 2];
+                    }
+                    else // 자식 대화 출력
+                    {
+                        parentTextBalloon.SetActive(false);
+                        childTextBalloon.SetActive(true);
+                        childText.GetComponent<Text>().text = dialogManager.dialogList.childDialogList[i / 2];
+                    }
+                    i++;
+                    dialogTextNum--;
+                }
+                else
+                {
+                    if (i % 2 == 1) // 엄마 대화 출력
+                    {
+                        childTextBalloon.SetActive(false);
+                        parentTextBalloon.SetActive(true);
+                        parentText.GetComponent<Text>().text = dialogManager.dialogList.parentsDialogList[i / 2];
+
+                    }
+                    else // 자식 대화 출력
+                    {
+                        parentTextBalloon.SetActive(false);
+                        childTextBalloon.SetActive(true);
+                        childText.GetComponent<Text>().text = dialogManager.dialogList.childDialogList[i / 2];
+                    }
+                    i++;
+                    dialogTextNum--;
+                }
+            }
+            yield return null;
+        }
+        while (true)
+        { 
+            if (Input.GetMouseButtonDown(0))
+            {
+                break;
+            }
+            yield return null;
+        }
+        parentTextBalloon.SetActive(false);
+        childTextBalloon.SetActive(false);
+    }
+
 
     //3단계부터 진행, 감정표현시 부모님 나옴, 캐릭터를 꾹누르면 감정표현
 
@@ -42,8 +131,13 @@ public class ExpressionManager : MonoBehaviour
                 if (touchedObject.CompareTag("Player"))
                 {
                     Debug.Log(touchedObject.name);
+
                     cry.Play();
                     parentObject.SetActive(true);
+
+                    StartCoroutine(ExpressionCor());
+
+
                 }
             }
         }
