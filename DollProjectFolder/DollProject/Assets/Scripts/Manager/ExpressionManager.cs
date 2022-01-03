@@ -5,61 +5,42 @@ using UnityEngine;
 public class ExpressionManager : MonoBehaviour
 {
     [SerializeField]
-    MainSceneManager mainSceneManager;
+    Camera cam;
+    AudioSource cry;
 
-    //버튼 두개들어가있는 패런트
-    //플레이어 스프라이트.
     [SerializeField]
-    SpriteRenderer playerSpriteRenderer;
-    //추후에 애니메이션으로 바뀔 예정인데 코루틴으로 해도 되고, 맘대로하시면 됩니다.
-    [SerializeField]
-    Sprite playerOriginalSprite;
-    [SerializeField]
-    Sprite[] cryingSprite;
-    
+    AudioClip[] cryLevel;
 
-    int nowCryLevel;
-    int nowCriedNumber;
-    const int cryLevelBound = 3;
-    const int endCryLevel = 4;
-    
-    void Start()
+    public void ChangeCryingSound()
     {
-        nowCryLevel = 0;
-        nowCriedNumber = 0;
+        GameManager.singleTon.saveData
     }
 
-    public void OnCryButton()
+    private void Start()
     {
-        nowCriedNumber++;
-        if(nowCriedNumber > cryLevelBound)
-        {
-            nowCriedNumber = 0;
-            nowCryLevel++;
-        }
-        StartCoroutine(CryCoroutine());
-    }
-    public void OnButtonParentActive(bool active)
-    {
-
+        cry = GetComponent<AudioSource>();
     }
 
-    
+    //3단계부터 진행, 감정표현시 부모님 나옴, 캐릭터를 꾹누르면 감정표현
 
-    IEnumerator CryCoroutine()
+    private void Update()
     {
-        mainSceneManager.ExpressionToggle();
-        playerSpriteRenderer.sprite = cryingSprite[nowCryLevel];
-        yield return new WaitForSeconds(1f);
-        playerSpriteRenderer.sprite = playerOriginalSprite;
-        if(nowCryLevel > endCryLevel)
+        if (Input.GetMouseButtonDown(0))
         {
-            mainSceneManager.GameOver();
+            GameObject touchedObject;               //터치한 오브젝트
+            RaycastHit2D hit;                         //터치를 위한 raycastHit
+            Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition); //마우스 좌클릭으로 마우스의 위치에서 Ray를 쏘아 오브젝트를 감지
+            if (hit = Physics2D.Raycast(mousePos, Vector2.zero))
+            {
+                touchedObject = hit.collider.gameObject;
+
+                //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
+                if (touchedObject.CompareTag("Player"))
+                {
+                    Debug.Log(touchedObject.name);
+                    cry.Play();
+                }
+            }
         }
-        else
-        {
-            mainSceneManager.ExpressionToggle();
-        }
-        
     }
 }
