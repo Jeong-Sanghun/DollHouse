@@ -52,7 +52,11 @@ public class Television : TouchableObject
                 {
                     Debug.Log("5ÃÊ °æ°ú");
                     mainSceneManager.energyPoint--;
-                    mainSceneManager.exprLevel++;
+                    if(mainSceneManager.exprLevel < 3)
+                    {
+                        mainSceneManager.exprLevel++;
+                    }
+
                     mainSceneManager.Equalize();
                 }
                 yield return null;
@@ -67,6 +71,7 @@ public class Television : TouchableObject
                 mainSceneManager.watchingTV = false;
                 tvSound.Stop();
                 televisionLightObject.SetActive(false);
+                StartCoroutine(mainSceneManager.ParentAppearCoroutine());
                 yield break;
             }
         }

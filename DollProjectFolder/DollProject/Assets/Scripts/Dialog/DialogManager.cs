@@ -15,7 +15,7 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
         dialogParser = new DialogParsing();
-        mainStroyNum = 1;
+        mainStroyNum = GameManager.singleTon.saveData.currentConversationLevel;
     }
 
     // Update is called once per frame
@@ -102,5 +102,6 @@ public class DialogManager : MonoBehaviour
     {
         dialogList = dialogParser.StoryParse("MainDialog" + dialogNo);
         mainStroyNum++;
+        GameManager.singleTon.saveData.currentConversationLevel = mainStroyNum;
     }
 }

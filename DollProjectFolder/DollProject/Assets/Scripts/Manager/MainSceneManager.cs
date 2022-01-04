@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainSceneManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject parentObject;
+    public GameObject parentObject;
+    SpriteRenderer parentSprite;
     [SerializeField]
     Sprite parentAngrySprite;
     [SerializeField]
@@ -13,6 +16,12 @@ public class MainSceneManager : MonoBehaviour
     //플레이어 트랜스폼
     [SerializeField]
     Transform playerTransform;
+    [SerializeField]
+    GameObject background;
+    [SerializeField]
+    Sprite backgroundAfter;
+    [SerializeField]
+    GameObject black;
 
     //텔레비전에서 바꿔줄 변수.
     public bool watchingTV;
@@ -35,24 +44,26 @@ public class MainSceneManager : MonoBehaviour
     bool isMovingRight;
     bool isMoving;
     //왼쪽 -0.43 오른쪽 8
-    float playerMoveTimer = 2;
+    //float playerMoveTimer = 2;
 
     // 활동력 매일 2로 초기화 시켜준다
     public int energyPoint = 2;
-    public int exprLevel = 0;
+    public int exprLevel;
     bool isParentAppear = false;
     //부모님이 등장하는 타이머. 초기값 30.
     //float parentAppearTimer = 30;
+    public bool isBalloonOn;
 
     bool isGameOver;
-
     [SerializeField]
     GameObject dialogManagerObj;
 
 
     void Start()
     {
+        parentAngryPostProcess.SetActive(false);
         parentObject.SetActive(false);
+        black.SetActive(false);
         watchingTV = false;
         isGameOver = false;
         //ㅎㅎ
@@ -63,49 +74,56 @@ public class MainSceneManager : MonoBehaviour
 
         openEmptyDiary = false;
         isOpenEmptyDiary = false;
+        isBalloonOn = false;
         //StartCoroutine(ParentAppearCoroutine());
-
         //DialogManager dialogManager = dialogManagerObj.GetComponent<DialogManager>();
         //dialogManager.RandDialog(1);
+        exprLevel = GameManager.singleTon.saveData.smartLevel;
+        parentSprite = parentObject.GetComponent<SpriteRenderer>();
     }
-
-    void ParentGetAngry()
+    public void ParentGetAngry()
     {
         parentAngryPostProcess.SetActive(true);
         parentObject.GetComponent<SpriteRenderer>().sprite = parentAngrySprite;
-        GameOver();
+        background.GetComponent<SpriteRenderer>().sprite = backgroundAfter;
+        //GameOver();
     }
-
-    bool ParentChecker()
+    IEnumerator ParentAngryCoroutine()
     {
-        if (watchingTV || playerMoveTimer < 1 || isExpressioning)
+        yield return new WaitForSeconds(2f);
+        ParentGetAngry();
+        yield return null;
+        StartCoroutine(NextSceneCoroutine());
+
+    }
+
+    public IEnumerator NextSceneCoroutine()
+    {
+        GameManager.singleTon.saveData.active = 2;
+        JsonManager.SaveJson(GameManager.singleTon.saveData);
+
+        yield return new WaitForSeconds(2f);
+        black.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(0);
+
+    }
+
+    public IEnumerator ParentAppearCoroutine()
+    {
+        isParentAppear = true;
+        parentObject.SetActive(true);
+        parentSprite.color = new Color(1, 1, 1, 0);
+        float time = 0;
+
+        while(time <= 2)
         {
-            return true;
-        }
-        else
-        {
-            return false;
+            time += Time.deltaTime;
+            parentSprite.color = new Color(1, 1, 1, time/2);
+            yield return null;
         }
     }
 
-    //IEnumerator ParentAppearCoroutine()
-    //{
-    //    parentObject.SetActive(false);
-    //    while (parentAppearTimer > 0)
-    //    {
-    //        parentAppearTimer -= Time.deltaTime;
-    //        yield return null;
-    //    }
-    //    if (!isGameOver)
-    //    {
-    //        parentObject.SetActive(true);
-    //        if (ParentChecker())
-    //        {
-    //            ParentGetAngry();
-    //        }
-    //    }
-
-    //}
     void CharacterPosition(float x)
     {
         startPosition = playerTransform.position;
@@ -170,53 +188,43 @@ public class MainSceneManager : MonoBehaviour
 
     void Update()
     {
-        //암데나 터치했을 때.
-        if (Input.GetMouseButtonDown(0))
+        if (!isBalloonOn && !isParentAppear)
         {
-            if (isExpressioning || isGameOver)
+            //암데나 터치했을 때.
+            if (Input.GetMouseButtonDown(0))
             {
-                return;
-            }
-            if (isParentAppear)
-            {
-                ParentGetAngry();
-            }
-            Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition); //마우스 좌클릭으로 마우스의 위치에서 Ray를 쏘아 오브젝트를 감지
-            if (hit = Physics2D.Raycast(mousePos, Vector2.zero))
-            {
-                //터치된 오브젝트
-                touchedObject = hit.collider.gameObject; //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
-                if (touchedObject.CompareTag("touchable"))
+                if (isExpressioning || isGameOver)
                 {
-                    //거리가 1 아래일경우
-                    if (Mathf.Abs(touchedObject.transform.position.x - playerTransform.position.x) < 1)
+                    return;
+                }
+                Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition); //마우스 좌클릭으로 마우스의 위치에서 Ray를 쏘아 오브젝트를 감지
+                if (hit = Physics2D.Raycast(mousePos, Vector2.zero))
+                {
+                    //터치된 오브젝트
+                    touchedObject = hit.collider.gameObject; //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
+                    if (touchedObject.CompareTag("touchable"))
                     {
-                        //이게 섹시포인트다.
-                        //이러면 touchableObject의 onTouch가 아니라
-                        //다이어리 누를땐 Diary.OnTouch가 실행된다. 완전 섹시포인트.
-                        touchedObject.GetComponent<TouchableObject>().OnTouch();
-                    }
-                    else
-                    {
-                        CharacterPosition(mousePos.x); //x좌표
+                        //거리가 1 아래일경우
+                        if (Mathf.Abs(touchedObject.transform.position.x - playerTransform.position.x) < 1)
+                        {
+                            //이게 섹시포인트다.
+                            //이러면 touchableObject의 onTouch가 아니라
+                            //다이어리 누를땐 Diary.OnTouch가 실행된다. 완전 섹시포인트.
+                            touchedObject.GetComponent<TouchableObject>().OnTouch();
+                        }
+                        else
+                        {
+                            CharacterPosition(mousePos.x); //x좌표
+                        }
                     }
                 }
+                else
+                {
+                    CharacterPosition(mousePos.x);
+                }
             }
-            else
-            {
-                CharacterPosition(mousePos.x);
-            }
-
-            if (energyPoint <= 0)
-            {
-                parentObject.SetActive(true);
-            }
+            CharacterMove();
         }
-
-        CharacterMove();
-
-
-
     }
 
     //Television스크립트에서 불러옴.
@@ -250,7 +258,10 @@ public class MainSceneManager : MonoBehaviour
     {
         GameManager.singleTon.saveData.active = energyPoint;
         GameManager.singleTon.saveData.smartLevel = exprLevel;
+        if (energyPoint <= 0)
+        {
+            StartCoroutine(ParentAppearCoroutine());
+            StartCoroutine(ParentAngryCoroutine());
+        }
     }
-
-
 }

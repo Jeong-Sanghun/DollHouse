@@ -41,12 +41,20 @@ public class ExpressionManager : MonoBehaviour
 
     IEnumerator ExpressionCor()
     {
+        yield return new WaitForSeconds(2f);
         if (mainSceneManager.exprLevel == 3)
         {
             // 메인 스토리 진행
             if (dialogManager.mainStroyNum == 8)
             {
-                Debug.Log("게임 오버");
+                Debug.Log("Game Over");
+
+                GameManager.singleTon.saveData.active = 2;
+                GameManager.singleTon.saveData.currentConversationLevel = 1;
+                GameManager.singleTon.saveData.smartLevel = 0;
+                GameManager.singleTon.saveData.tvPower = false;
+                JsonManager.SaveJson(GameManager.singleTon.saveData);
+
                 yield break;
             }
             else
@@ -111,6 +119,9 @@ public class ExpressionManager : MonoBehaviour
         }
         parentTextBalloon.SetActive(false);
         childTextBalloon.SetActive(false);
+        mainSceneManager.ParentGetAngry();
+        mainSceneManager.isBalloonOn = false;
+        StartCoroutine(mainSceneManager.NextSceneCoroutine());
     }
 
 
@@ -133,11 +144,12 @@ public class ExpressionManager : MonoBehaviour
                     Debug.Log(touchedObject.name);
 
                     cry.Play();
-                    parentObject.SetActive(true);
-
-                    StartCoroutine(ExpressionCor());
-
-
+                    if (dialogManager.mainStroyNum <= 7)
+                    {
+                        mainSceneManager.isBalloonOn = true;
+                        StartCoroutine(mainSceneManager.ParentAppearCoroutine());
+                        StartCoroutine(ExpressionCor());
+                    }
                 }
             }
         }

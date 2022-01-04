@@ -14,7 +14,7 @@ public class SaveDataClass
         active = 2;
         tvPower = false;
         smartLevel = 0;
-        currentConversationLevel = 0;
+        currentConversationLevel = 1;
     }
 
     //감정표현 진행후 하루끝날때 , 활동력변화있을때,  티비 킬때
