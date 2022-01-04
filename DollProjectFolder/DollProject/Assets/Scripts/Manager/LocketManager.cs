@@ -25,17 +25,17 @@ public class LocketManager : MonoBehaviour
     {
         string locketString = locketInputField.text;
 
-        if (locketString.Contains("Èûµé"))
+        if (locketString=="Èûµé¾î¿ä")
         {
             locketObjectImage.sprite = locketObjectSprite[(int)LocketObject.Rope];
             locketCanvas.SetActive(false);
         }
-        else if (locketString.Contains("»ì·Á"))
+        else if (locketString=="»ì·ÁÁà¿ä")
         {
             locketObjectImage.sprite = locketObjectSprite[(int)LocketObject.Key];
             locketCanvas.SetActive(false);
         }
-        else if (locketString.Contains("µµ¿Í"))
+        else if (locketString=="µµ¿ÍÁà¿ä")
         {
             locketObjectImage.sprite = locketObjectSprite[(int)LocketObject.Phone];
             locketCanvas.SetActive(false);
