@@ -35,6 +35,7 @@ public class MainSceneManager : MonoBehaviour
     [SerializeField]
     Camera cam;                      //레이캐스트를 위한 카메라.
 
+    Vector3 firstPosition;
     Vector3 startPosition;
     Vector3 laterPosition;
     bool isMovingRight;
@@ -79,7 +80,7 @@ public class MainSceneManager : MonoBehaviour
         exprLevel = GameManager.singleTon.saveData.smartLevel;
         energyPoint = GameManager.singleTon.saveData.active;
         watchingTV = GameManager.singleTon.saveData.tvPower;
-        
+        firstPosition = playerTransform.position;
         parentSprite = parentObject.GetComponent<SpriteRenderer>();
         GameManager.singleTon.mainSceneManager = this;
     }
@@ -127,13 +128,35 @@ public class MainSceneManager : MonoBehaviour
             parentObject.SetActive(true);
             parentSprite.color = new Color(1, 1, 1, 0);
             float time = 0;
+            Vector3 playerPos = playerTransform.position;
+
+            if (playerPos.x > startPosition.x)
+            {
+                isMovingRight = false;
+            }
+            else
+            {
+                isMovingRight = true;
+            }
+
+            if (playerTransform.localEulerAngles.y == 180 && isMovingRight == false)
+            {
+                playerTransform.localEulerAngles = new Vector3(0, 0, 0);
+            }
+            if (playerTransform.localEulerAngles.y == 0 && isMovingRight == true)
+            {
+                playerTransform.localEulerAngles = new Vector3(0, 180, 0);
+            }
 
             while (time <= 2)
             {
                 time += Time.deltaTime;
                 parentSprite.color = new Color(1, 1, 1, time / 2);
+                playerTransform.position = Vector3.Lerp(playerPos, firstPosition, time);
                 yield return null;
             }
+
+            playerTransform.localEulerAngles = new Vector3(0, 0, 0);
         }
 
     }

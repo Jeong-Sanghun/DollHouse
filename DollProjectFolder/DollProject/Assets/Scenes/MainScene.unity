@@ -558,7 +558,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 83a21f4d53bb30b4fa9aa9634ceaef93, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -691,6 +691,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -823,6 +824,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092ce59f5845fa34e9850c14e4b82178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &555233096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,7 +2360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.1653, y: -11.2846}
+  m_AnchoredPosition: {x: 13.1653, y: -32}
   m_SizeDelta: {x: 780.6506, y: 1105.794}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401684064
@@ -2371,18 +2384,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_Font: {fileID: 12800000, guid: 4b6fa3a218bf3284688e14f8c23637cc, type: 3}
+    m_FontSize: 58
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 50
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.03
+    m_LineSpacing: 0.515
   m_Text: 
 --- !u!222 &1401684065
 CanvasRenderer:
@@ -3691,7 +3704,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f157f72d49d0c574b8dc42d892ce8ef8, type: 3}
+    m_Font: {fileID: 12800000, guid: 4b6fa3a218bf3284688e14f8c23637cc, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0

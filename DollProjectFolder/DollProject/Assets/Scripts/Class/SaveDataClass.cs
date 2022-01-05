@@ -8,6 +8,7 @@ public class SaveDataClass
     public bool tvPower;
     public int smartLevel;
     public int currentConversationLevel;
+    public bool isReplay;
 
     public SaveDataClass() //시작할때 생성자
     {
@@ -15,6 +16,7 @@ public class SaveDataClass
         tvPower = false;
         smartLevel = 0;
         currentConversationLevel = 1;
+        isReplay = false;
     }
 
     //감정표현 진행후 하루끝날때 , 활동력변화있을때,  티비 킬때

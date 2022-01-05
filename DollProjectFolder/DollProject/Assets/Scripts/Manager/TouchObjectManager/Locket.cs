@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Text;
 
 public enum LocketObject
 {
@@ -23,12 +24,18 @@ public class Locket : TouchableObject
     Sprite[] locketObjectSprite;
 
     bool isOpened;
+    bool locketChanged;
     LocketObject openedObject;
 
     protected override void Start()
     {
         base.Start();
         isOpened = false;
+    }
+
+    private void Update()
+    {
+        locketChanged = false;
     }
 
     public override void OnTouch()
@@ -79,9 +86,24 @@ public class Locket : TouchableObject
 
     public void OnValueEnd()
     {
+        if(locketChanged == true)
+        {
+            return;
+        }
         string locketString = locketInputField.text;
         SoundManager.singleTon.LocketKeyboardPlay();
-
+        locketChanged = true;
+        if(mainSceneManager.exprLevel != 3)
+        {
+            StringBuilder builder = new StringBuilder();
+            string symbols = "!@#$%&";
+            for (int i = 0; i < locketString.Length; i++)
+            {
+                builder.Append(symbols[Random.Range(0, symbols.Length)]);
+            }
+            locketString = builder.ToString();
+            locketInputField.text = builder.ToString();
+        }
         if (locketString == "Èûµé¾î¿ä")
         {
             openedObject = LocketObject.Rope;

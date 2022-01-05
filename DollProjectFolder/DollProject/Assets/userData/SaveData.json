@@ -2,5 +2,6 @@
     "active": 2,
     "tvPower": false,
     "smartLevel": 0,
-    "currentConversationLevel": 1
+    "currentConversationLevel": 1,
+    "isReplay": false
 }

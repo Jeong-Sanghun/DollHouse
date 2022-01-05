@@ -101,6 +101,9 @@ public class GameManager : MonoBehaviour
 
     IEnumerator BackToStartScene()
     {
+        saveData = new SaveDataClass();
+        saveData.isReplay = true;
+        JsonManager.SaveJson(saveData);
         yield return new WaitForSeconds(3f);
         while (true)
         {
