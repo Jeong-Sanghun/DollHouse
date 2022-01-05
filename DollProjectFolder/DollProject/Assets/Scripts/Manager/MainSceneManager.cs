@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +11,9 @@ public class MainSceneManager : MonoBehaviour
     public GameObject parentObject;
     SpriteRenderer parentSprite;
     [SerializeField]
-    Sprite parentAngrySprite;
+    ModuleManager moduleManager;
+    [SerializeField]
+    PostProcessVolume effectVolume;
     [SerializeField]
     GameObject parentAngryPostProcess;
     //플레이어 트랜스폼
@@ -19,16 +22,23 @@ public class MainSceneManager : MonoBehaviour
     [SerializeField]
     GameObject background;
     [SerializeField]
+    Sprite originBackGround;
+    [SerializeField]
     Sprite backgroundAfter;
     [SerializeField]
+    Sprite openedDoorBackground;
+    [SerializeField]
     GameObject black;
+    [SerializeField]
+    Animator playerAnim;
+
 
     //텔레비전에서 바꿔줄 변수.
     public bool watchingTV;
     public bool isExpressioning;
 
     //다이어리에서 바꿔줄 변수.ㅎㅎ
-    bool isObjectOpen;
+    public bool isObjectOpen;
 
     GameObject touchedObject;               //터치한 오브젝트
     RaycastHit2D hit;                         //터치를 위한 raycastHit
@@ -87,9 +97,8 @@ public class MainSceneManager : MonoBehaviour
     public void ParentGetAngry()
     {
         StartCoroutine(SoundManager.singleTon.BgmPitchDownCoroutine());
-        parentAngryPostProcess.SetActive(true);
-        parentObject.GetComponent<SpriteRenderer>().sprite = parentAngrySprite;
-        background.GetComponent<SpriteRenderer>().sprite = backgroundAfter;
+        
+        StartCoroutine(BackGroundChangeCoroutine());
         //GameOver();
     }
     IEnumerator ParentAngryCoroutine()
@@ -103,6 +112,20 @@ public class MainSceneManager : MonoBehaviour
             StartCoroutine(NextSceneCoroutine());
             parentAngryCoroutineRunning = false;
         }
+    }
+
+    IEnumerator BackGroundChangeCoroutine()
+    {
+        parentAngryPostProcess.SetActive(true);
+        StartCoroutine(moduleManager.VolumeModule(effectVolume, true, 1));
+        for (int i = 0; i < 5; i++)
+        {
+            background.GetComponent<SpriteRenderer>().sprite = backgroundAfter;
+            yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
+            background.GetComponent<SpriteRenderer>().sprite = originBackGround;
+            yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
+        }
+        background.GetComponent<SpriteRenderer>().sprite = backgroundAfter;
 
     }
 
@@ -111,7 +134,7 @@ public class MainSceneManager : MonoBehaviour
         GameManager.singleTon.saveData.active = 2;
         JsonManager.SaveJson(GameManager.singleTon.saveData);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(6f);
         black.SetActive(true);
         yield return new WaitForSeconds(2f);
         SoundManager.singleTon.BgmPitchOne();
@@ -124,13 +147,14 @@ public class MainSceneManager : MonoBehaviour
         SoundManager.singleTon.ParentFootPlay();
        if(isParentAppear == false)
         {
+            background.GetComponent<SpriteRenderer>().sprite = openedDoorBackground;
             isParentAppear = true;
             parentObject.SetActive(true);
             parentSprite.color = new Color(1, 1, 1, 0);
             float time = 0;
             Vector3 playerPos = playerTransform.position;
-
-            if (playerPos.x > startPosition.x)
+            playerAnim.SetBool("Walk", true);
+            if (playerPos.x > firstPosition.x)
             {
                 isMovingRight = false;
             }
@@ -138,12 +162,12 @@ public class MainSceneManager : MonoBehaviour
             {
                 isMovingRight = true;
             }
-
-            if (playerTransform.localEulerAngles.y == 180 && isMovingRight == false)
+            Debug.Log(isMovingRight);
+            if (isMovingRight == false)
             {
                 playerTransform.localEulerAngles = new Vector3(0, 0, 0);
             }
-            if (playerTransform.localEulerAngles.y == 0 && isMovingRight == true)
+            if (isMovingRight == true)
             {
                 playerTransform.localEulerAngles = new Vector3(0, 180, 0);
             }
@@ -151,11 +175,19 @@ public class MainSceneManager : MonoBehaviour
             while (time <= 2)
             {
                 time += Time.deltaTime;
+                            if (isMovingRight == false)
+            {
+                playerTransform.localEulerAngles = new Vector3(0, 0, 0);
+            }
+            if (isMovingRight == true)
+            {
+                playerTransform.localEulerAngles = new Vector3(0, 180, 0);
+            }
                 parentSprite.color = new Color(1, 1, 1, time / 2);
-                playerTransform.position = Vector3.Lerp(playerPos, firstPosition, time);
+                playerTransform.position = Vector3.Lerp(playerPos, firstPosition, time/2);
                 yield return null;
             }
-
+            background.GetComponent<SpriteRenderer>().sprite = originBackGround;
             playerTransform.localEulerAngles = new Vector3(0, 0, 0);
         }
 
@@ -174,7 +206,7 @@ public class MainSceneManager : MonoBehaviour
         {
             isMovingRight = true;
         }
-
+        playerAnim.SetBool("Walk", true);
         if (playerTransform.localEulerAngles.y == 180 && isMovingRight == false)
         {
             playerTransform.localEulerAngles = new Vector3(0, 0, 0);
@@ -193,7 +225,7 @@ public class MainSceneManager : MonoBehaviour
         {
             return;
         }
-
+        SoundManager.singleTon.WalkingPlay();
         float speed = 5 * Time.deltaTime;
         Vector3 position;
         position = playerTransform.position;
@@ -201,6 +233,7 @@ public class MainSceneManager : MonoBehaviour
         {
             if (playerTransform.position.x > laterPosition.x)
             {
+                playerAnim.SetBool("Walk", false);
                 isMoving = false;
                 playerTransform.position = laterPosition;
             }
@@ -214,6 +247,7 @@ public class MainSceneManager : MonoBehaviour
             if (playerTransform.position.x < laterPosition.x)
             {
                 isMoving = false;
+                playerAnim.SetBool("Walk", false);
                 playerTransform.position = laterPosition;
             }
             else
@@ -288,7 +322,6 @@ public class MainSceneManager : MonoBehaviour
 
     public void Equalize()
     {
-        Debug.Log("이퀄라이즈");
         GameManager.singleTon.saveData.active = energyPoint;
         GameManager.singleTon.saveData.smartLevel = exprLevel;
         GameManager.singleTon.saveData.tvPower = watchingTV;

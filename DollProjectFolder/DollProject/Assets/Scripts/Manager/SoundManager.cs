@@ -66,11 +66,11 @@ public class SoundManager : MonoBehaviour
         effectSource.Play();
     }
 
-    public void PlayTv()
+    public void PlayTv(int index)
     {
         if (!tvSource.isPlaying)
         {
-            tvSource.clip = tvClip[Random.Range(0, 5)];
+            tvSource.clip = tvClip[index];
             tvSource.Play();
         }
     }

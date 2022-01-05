@@ -10,6 +10,9 @@ public class Television : TouchableObject
     AudioSource tvSound;
     [SerializeField]
     AudioClip[] tvSoundArray;
+    [SerializeField]
+    GameObject[] tvAnimArray;
+    GameObject nowActiveTv;
 
     protected override void Start()
     {
@@ -36,6 +39,8 @@ public class Television : TouchableObject
             else
             {
                 SoundManager.singleTon.StopTv();
+            nowActiveTv.SetActive(false);
+            nowActiveTv = null;
             }
       //  }
 
@@ -44,7 +49,14 @@ public class Television : TouchableObject
     {
         if (!mainSceneManager.watchingTV)
         {
-            SoundManager.singleTon.PlayTv();
+            int randomIndex = Random.Range(0, 5);
+            if(nowActiveTv== null)
+            {
+                tvAnimArray[randomIndex].SetActive(true);
+                nowActiveTv = tvAnimArray[randomIndex];
+            }
+
+            SoundManager.singleTon.PlayTv(randomIndex);
             mainSceneManager.watchingTV = true;
             mainSceneManager.Equalize();
             float timer = 0;
@@ -79,6 +91,8 @@ public class Television : TouchableObject
             {
                 mainSceneManager.watchingTV = false;
                 SoundManager.singleTon.StopTv();
+                nowActiveTv.SetActive(false);
+                nowActiveTv = null;
                 mainSceneManager.Equalize();
                 televisionLightObject.SetActive(false);
                 //StartCoroutine(mainSceneManager.ParentAppearCoroutine());

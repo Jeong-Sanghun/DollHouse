@@ -25,7 +25,6 @@ public class JsonManager
         //안드로이드의 경우에는 데이터조작을 막기위해 2진데이터로 변환을 해야한다
 
         string savePath = Application.dataPath;
-        string appender = "/userData/SaveData.json";
 #if UNITY_EDITOR_WIN
 
 #endif
@@ -33,10 +32,23 @@ public class JsonManager
         savePath = Application.persistentDataPath;
   
 #endif
+        string directory = "/userData";
+        string appender = "/SaveData.json";
+
+        StringBuilder builder = new StringBuilder(savePath);
+        builder.Append(directory);
+        //위까지는 세이브랑 똑같다
+        //파일스트림을 만들어준다. 파일모드를 open으로 해서 열어준다. 다 구글링이다
+        string builderToString = builder.ToString();
+        if (!Directory.Exists(builderToString))
+        {
+            //디렉토리가 없는경우 만들어준다
+            Directory.CreateDirectory(builderToString);
+
+        }
+        builder.Append(appender);
         //stringBuilder는 최적화에 좋대서 쓰고있다. string+string은 메모리낭비가 심하다
         // 사실 이정도 한두번 쓰는건 상관없긴한데 그냥 써주자. 우리의 컴은 좋으니까..
-        StringBuilder builder = new StringBuilder(savePath);
-        builder.Append(appender);
         jsonText = JsonUtility.ToJson(saveData, true);
         //이러면은 일단 데이터가 텍스트로 변환이 된다
         //jsonUtility를 이용하여 data인 WholeGameData를 json형식의 text로 바꾸어준다

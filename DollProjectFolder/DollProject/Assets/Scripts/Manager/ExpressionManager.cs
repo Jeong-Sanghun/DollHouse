@@ -25,6 +25,8 @@ public class ExpressionManager : MonoBehaviour
     MainSceneManager mainSceneManager;
     [SerializeField]
     Television television;
+    [SerializeField]
+    Animator playerAnim;
     bool isTouched;
 
     private void Start()
@@ -122,7 +124,10 @@ public class ExpressionManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && mainSceneManager.isParentAppear ==false && GameManager.singleTon.isGameEnd == false && GameManager.singleTon.isOptionOpen == false)
+        if (Input.GetMouseButtonDown(0) && mainSceneManager.isParentAppear ==false 
+            && GameManager.singleTon.isGameEnd == false
+            && GameManager.singleTon.isOptionOpen == false
+            && mainSceneManager.isObjectOpen == false)
         {
             GameObject touchedObject;               //터치한 오브젝트
             RaycastHit2D hit;                         //터치를 위한 raycastHit
@@ -137,11 +142,17 @@ public class ExpressionManager : MonoBehaviour
                     isTouched = true;
 
                     SoundManager.singleTon.CryPlay(mainSceneManager.exprLevel);
+                    playerAnim.SetBool("Cry", true);
                     if (dialogManager.mainStroyNum <= 7)
                     {
                         mainSceneManager.isBalloonOn = true;
                         StartCoroutine(mainSceneManager.ParentAppearCoroutine());
                         StartCoroutine(ExpressionCor());
+                    }
+                    else
+                    {
+                        mainSceneManager.isBalloonOn = true;
+                        StartCoroutine(GameEndCoroutine());
                     }
                     if(mainSceneManager.watchingTV == true)
                     {
@@ -152,5 +163,10 @@ public class ExpressionManager : MonoBehaviour
         }
     }
     
+    IEnumerator GameEndCoroutine()
+    {
+        yield return new WaitForSeconds(3f);
+        GameManager.singleTon.GameClear(LocketObject.Die);
+    }
 
 }

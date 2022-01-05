@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GoogleMobileAds.Api;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,7 +32,24 @@ public class GameManager : MonoBehaviour
 
     public bool isOptionOpen;
     public bool isGameEnd;
+    bool isRestartable;
     // Start is called before the first frame update
+
+    private InterstitialAd interstitial;
+    string appID;
+    private void RequestInterstitial()
+    {
+        //string adUnitId = "ca-app-pub-3940256099942544/8691691433";
+        //string adUnitId = "ca-app-pub-3940256099942544/1033173712";
+        string adUnitId = "ca-app-pub-6023793752348178/3214040485"; //ÀÌ°ÔÂð¶Ç
+        // Initialize an InterstitialAd.
+        this.interstitial = new InterstitialAd(adUnitId);
+        AdRequest request = new AdRequest.Builder().Build();
+        // Load the interstitial with the request.
+        this.interstitial.LoadAd(request);
+        this.interstitial.OnAdClosed += HandleOnAdClosed;
+    }
+
     void Awake()
     {
         if (singleTon == null)
@@ -47,14 +66,28 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        
+        appID = "ca-app-pub-6023793752348178~3405612175";
+        MobileAds.Initialize((initStatus) =>{ });
         isGameEnd = false;
         isOptionOpen = false;
+        isRestartable = true;
+        Application.targetFrameRate = 60;
+        RequestInterstitial();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0) && isRestartable == true)
+        {
+
+            isGameEnd = false;
+            gameOverText.text = "";
+            gameOverCanvas.SetActive(false);
+            SceneManager.LoadScene(0);
+
+            isRestartable = false;
+        }
     }
 
     void Save()
@@ -95,29 +128,36 @@ public class GameManager : MonoBehaviour
         gameOverCanvas.SetActive(true);
         fadeImage.color = new Color(0, 0, 0, 0);
         StartCoroutine(moduleManager.FadeModule_Image(fadeImage, 0, 1, 1));
-        StartCoroutine(moduleManager.AfterRunCoroutine(1,moduleManager.LoadTextOneByOne(clearString, gameOverText,0.3f,false)));
+        StartCoroutine(moduleManager.AfterRunCoroutine(1,moduleManager.LoadTextOneByOne(clearString, gameOverText,0.1f,false)));
         StartCoroutine(BackToStartScene());
     }
 
     IEnumerator BackToStartScene()
     {
+
         saveData = new SaveDataClass();
         saveData.isReplay = true;
         JsonManager.SaveJson(saveData);
-        yield return new WaitForSeconds(3f);
-        while (true)
+        yield return new WaitForSeconds(4f);
+        isRestartable = true;
+        if(this.interstitial.IsLoaded() == false)
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                isGameEnd = false;
-                gameOverText.text = "";
-                gameOverCanvas.SetActive(false);
-                SceneManager.LoadScene(0);
-                break;
-            }
-            yield return null;
+            isRestartable = true;
         }
+        else
+        {
+            isRestartable = false;
+            this.interstitial.Show();
+        }   
     }
+    public void HandleOnAdClosed(object sender, EventArgs args)
+    {
+        RequestInterstitial();
+        isRestartable = true;
+
+    }
+
+
 
     public void GameStart(bool isLoaded)
     {
@@ -139,7 +179,6 @@ public class GameManager : MonoBehaviour
         yield return null;
         if (isLoaded)
         {
-            Debug.Log("¤±¤¤¤·¤©");
             Load();
         }
 
