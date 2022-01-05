@@ -93,6 +93,7 @@ public class MainSceneManager : MonoBehaviour
         firstPosition = playerTransform.position;
         parentSprite = parentObject.GetComponent<SpriteRenderer>();
         GameManager.singleTon.mainSceneManager = this;
+        GameManager.singleTon.AdRequest();
     }
     public void ParentGetAngry()
     {

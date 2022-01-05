@@ -67,12 +67,12 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         appID = "ca-app-pub-6023793752348178~3405612175";
-        MobileAds.Initialize((initStatus) =>{ });
+       
         isGameEnd = false;
         isOptionOpen = false;
         isRestartable = true;
         Application.targetFrameRate = 60;
-        RequestInterstitial();
+
     }
 
     // Update is called once per frame
@@ -88,6 +88,12 @@ public class GameManager : MonoBehaviour
 
             isRestartable = false;
         }
+    }
+
+    public void AdRequest()
+    {
+        MobileAds.Initialize((initStatus) => { });
+        RequestInterstitial();
     }
 
     void Save()
@@ -181,6 +187,7 @@ public class GameManager : MonoBehaviour
         {
             Load();
         }
+        
 
     }
 
