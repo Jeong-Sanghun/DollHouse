@@ -21,6 +21,8 @@ public class Locket : TouchableObject
     Television television;
     [SerializeField]
     GameObject openedLocket;
+    [SerializeField]
+    SpriteRenderer tableRenderer;
 
     [SerializeField]
     Sprite[] locketObjectSprite;
@@ -72,6 +74,7 @@ public class Locket : TouchableObject
     IEnumerator LocketOpenCoroutine()
     {
         SoundManager.singleTon.OpenLocketPlay();
+        tableRenderer.sortingOrder = 1;
         openedLocket.SetActive(true);
         locketObjectSpriteRenderer.gameObject.SetActive(true);
         isOpened = true;
