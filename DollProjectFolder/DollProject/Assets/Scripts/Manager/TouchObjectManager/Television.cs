@@ -11,12 +11,23 @@ public class Television : TouchableObject
     [SerializeField]
     AudioClip[] tvSoundArray;
 
+    protected override void Start()
+    {
+        base.Start();
+        if(GameManager.singleTon.saveData.tvPower == true)
+        {
+            mainSceneManager.watchingTV = false;
+            televisionLightObject.SetActive(true);
+            StartCoroutine(WatchingTVCor());
+        }
+    }
+
     public override void OnTouch()
     {
         base.OnTouch();
         //라이트가 켜져있나 꺼져있나. 
-        if (mainSceneManager.energyPoint > 0)
-        {
+        //if (mainSceneManager.energyPoint > 0)
+        //{
             televisionLightObject.SetActive(!televisionLightObject.activeSelf);
             if (televisionLightObject.activeSelf)
             {
@@ -26,7 +37,7 @@ public class Television : TouchableObject
             {
                 SoundManager.singleTon.StopTv();
             }
-        }
+      //  }
 
     }
     IEnumerator WatchingTVCor()
@@ -35,6 +46,7 @@ public class Television : TouchableObject
         {
             SoundManager.singleTon.PlayTv();
             mainSceneManager.watchingTV = true;
+            mainSceneManager.Equalize();
             float timer = 0;
 
             while (timer < 5f)
@@ -43,6 +55,7 @@ public class Television : TouchableObject
                 if (!televisionLightObject.activeSelf)
                 {
                     mainSceneManager.watchingTV = false;
+                    mainSceneManager.Equalize();
                     yield break;
                 }
                 if (timer >= 5f)
@@ -53,20 +66,20 @@ public class Television : TouchableObject
                     {
                         mainSceneManager.exprLevel++;
                     }
-
-                    mainSceneManager.Equalize();
                 }
                 yield return null;
             }
             if (mainSceneManager.energyPoint > 0)
             {
                 mainSceneManager.watchingTV = false;
+                mainSceneManager.Equalize();
                 StartCoroutine(WatchingTVCor());
             }
             else
             {
                 mainSceneManager.watchingTV = false;
                 SoundManager.singleTon.StopTv();
+                mainSceneManager.Equalize();
                 televisionLightObject.SetActive(false);
                 //StartCoroutine(mainSceneManager.ParentAppearCoroutine());
             }

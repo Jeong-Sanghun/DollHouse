@@ -39,19 +39,30 @@ public class Locket : TouchableObject
         {
             locketCanvas.SetActive(true);
         }
+        mainSceneManager.ObjectActive();
 
     }
 
     public void LocketActiveFalse()
     {
-        Debug.Log("¹«½Ã¤Å¤·");
+        if (GameManager.singleTon.isOptionOpen == true)
+        {
+            return;
+        }
         mainSceneManager.energyPoint--;
+        mainSceneManager.ObjectActive();
+        if (mainSceneManager.energyPoint == 0 && mainSceneManager.watchingTV == true)
+        {
+            Debug.Log("¿Ö¾ÈµÅ");
+            television.OnTouch();
+        }
         mainSceneManager.Equalize();
         locketCanvas.SetActive(false);
     }
 
     IEnumerator LocketOpenCoroutine()
     {
+        SoundManager.singleTon.OpenLocketPlay();
         locketObjectSpriteRenderer.gameObject.SetActive(true);
         isOpened = true;
         locketCanvas.SetActive(false);
@@ -69,6 +80,7 @@ public class Locket : TouchableObject
     public void OnValueEnd()
     {
         string locketString = locketInputField.text;
+        SoundManager.singleTon.LocketKeyboardPlay();
 
         if (locketString == "Èûµé¾î¿ä")
         {

@@ -28,11 +28,7 @@ public class MainSceneManager : MonoBehaviour
     public bool isExpressioning;
 
     //다이어리에서 바꿔줄 변수.ㅎㅎ
-    public bool openDiary;
-    public bool isOpenDiary;
-
-    public bool openEmptyDiary;
-    public bool isOpenEmptyDiary;
+    bool isObjectOpen;
 
     GameObject touchedObject;               //터치한 오브젝트
     RaycastHit2D hit;                         //터치를 위한 raycastHit
@@ -59,6 +55,8 @@ public class MainSceneManager : MonoBehaviour
     [SerializeField]
     GameObject dialogManagerObj;
 
+    bool parentAngryCoroutineRunning;
+
 
     void Start()
     {
@@ -68,19 +66,20 @@ public class MainSceneManager : MonoBehaviour
         watchingTV = false;
         isGameOver = false;
         //ㅎㅎ
-        openDiary = false;
-        isOpenDiary = false;
+        isObjectOpen = false;
         isMoving = false;
         isMovingRight = false;
 
-        openEmptyDiary = false;
-        isOpenEmptyDiary = false;
+
         isBalloonOn = false;
+        parentAngryCoroutineRunning = false;
         //StartCoroutine(ParentAppearCoroutine());
         //DialogManager dialogManager = dialogManagerObj.GetComponent<DialogManager>();
         //dialogManager.RandDialog(1);
-        //exprLevel = GameManager.singleTon.saveData.smartLevel;
-        exprLevel = 0;
+        exprLevel = GameManager.singleTon.saveData.smartLevel;
+        energyPoint = GameManager.singleTon.saveData.active;
+        watchingTV = GameManager.singleTon.saveData.tvPower;
+        
         parentSprite = parentObject.GetComponent<SpriteRenderer>();
         GameManager.singleTon.mainSceneManager = this;
     }
@@ -94,10 +93,15 @@ public class MainSceneManager : MonoBehaviour
     }
     IEnumerator ParentAngryCoroutine()
     {
-        yield return new WaitForSeconds(2f);
-        ParentGetAngry();
-        yield return null;
-        StartCoroutine(NextSceneCoroutine());
+        if(parentAngryCoroutineRunning == false)
+        {
+            parentAngryCoroutineRunning = true;
+            yield return new WaitForSeconds(2f);
+            ParentGetAngry();
+            yield return null;
+            StartCoroutine(NextSceneCoroutine());
+            parentAngryCoroutineRunning = false;
+        }
 
     }
 
@@ -116,18 +120,22 @@ public class MainSceneManager : MonoBehaviour
 
     public IEnumerator ParentAppearCoroutine()
     {
-       
-        isParentAppear = true;
-        parentObject.SetActive(true);
-        parentSprite.color = new Color(1, 1, 1, 0);
-        float time = 0;
-
-        while(time <= 2)
+        SoundManager.singleTon.ParentFootPlay();
+       if(isParentAppear == false)
         {
-            time += Time.deltaTime;
-            parentSprite.color = new Color(1, 1, 1, time/2);
-            yield return null;
+            isParentAppear = true;
+            parentObject.SetActive(true);
+            parentSprite.color = new Color(1, 1, 1, 0);
+            float time = 0;
+
+            while (time <= 2)
+            {
+                time += Time.deltaTime;
+                parentSprite.color = new Color(1, 1, 1, time / 2);
+                yield return null;
+            }
         }
+
     }
 
     void CharacterPosition(float x)
@@ -194,7 +202,7 @@ public class MainSceneManager : MonoBehaviour
 
     void Update()
     {
-        if (!isBalloonOn && !isParentAppear && GameManager.singleTon.isGameEnd == false)
+        if (!isBalloonOn && !isParentAppear && GameManager.singleTon.isGameEnd == false && isObjectOpen == false && GameManager.singleTon.isOptionOpen == false)
         {
             //암데나 터치했을 때.
             if (Input.GetMouseButtonDown(0))
@@ -240,14 +248,9 @@ public class MainSceneManager : MonoBehaviour
     }
 
     //ㅎㅎ
-    public void OpenTheDiary()
+    public void ObjectActive()
     {
-        openDiary = !openDiary;
-    }
-
-    public void OpenTheEmptyDiary()
-    {
-        openEmptyDiary = !openEmptyDiary;
+        isObjectOpen = !isObjectOpen;
     }
 
     public void GameOver()
@@ -262,8 +265,10 @@ public class MainSceneManager : MonoBehaviour
 
     public void Equalize()
     {
+        Debug.Log("이퀄라이즈");
         GameManager.singleTon.saveData.active = energyPoint;
         GameManager.singleTon.saveData.smartLevel = exprLevel;
+        GameManager.singleTon.saveData.tvPower = watchingTV;
         JsonManager.SaveJson(GameManager.singleTon.saveData);
         if (energyPoint <= 0)
         {

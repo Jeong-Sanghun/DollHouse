@@ -39,30 +39,30 @@ public class Diary : TouchableObject
         base.OnTouch();
         //다이어리가 켜져있으면 꺼주고, 꺼져있으면 켜준다.
         diaryObject.SetActive(true);
-        mainSceneManager.OpenTheDiary();
-
+        SoundManager.singleTon.NoteOpenPlay();
+        mainSceneManager.ObjectActive();
         if (mainSceneManager.exprLevel == 3)
         {
-            if (mainSceneManager.openDiary)
+            Debug.Log("적혀있는 일기장 열었다");
+            diaryObject.SetActive(true);
+            if (isOpenedInThisScene == false)
             {
-                Debug.Log("적혀있는 일기장 열었다");
-                diaryObject.SetActive(true);
-                if (isOpenedInThisScene==false)
-                {
-                    SoundManager.singleTon.PencilSoundPlay();
-                    StartCoroutine(moduleManager.LoadTextOneByOne(wholeDiaryString,
-                        diaryTextComponent, 0.3f, false));
-                }
-                
+                SoundManager.singleTon.PencilSoundPlay();
+                StartCoroutine(moduleManager.LoadTextOneByOne(wholeDiaryString,
+                    diaryTextComponent, 0.3f, false));
             }
         }
     }
 
     public void DiaryExit()
     {
+        if (GameManager.singleTon.isOptionOpen == true)
+        {
+            return;
+        }
         diaryObject.SetActive(false);
-        mainSceneManager.OpenTheDiary();
-        if(isOpenedInThisScene == false)
+        mainSceneManager.ObjectActive();
+        if (isOpenedInThisScene == false)
             mainSceneManager.energyPoint--; //활동력 -1
         mainSceneManager.Equalize();
         isOpenedInThisScene = true;

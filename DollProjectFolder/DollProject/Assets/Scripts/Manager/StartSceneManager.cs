@@ -22,6 +22,7 @@ public class StartSceneManager : MonoBehaviour
 
     public void StartGameButton(bool isLoaded)
     {
+        SoundManager.singleTon.ButtonPlay();
         StartCoroutine(GameStartCoroutine(isLoaded));
     }
 
@@ -30,9 +31,9 @@ public class StartSceneManager : MonoBehaviour
         startButton.interactable = false;
         loadButton.interactable = false;
         StartCoroutine(moduleManager.VolumeModule(blurVolume, false, 1));
-        StartCoroutine(moduleManager.MoveModuleRect_Linear(upRect, new Vector3(0, 850, 0), 1));
-        StartCoroutine(moduleManager.MoveModuleRect_Linear(downRect, new Vector3(0, -600, 0), 1));
-        yield return new WaitForSeconds(1f);
+        StartCoroutine(moduleManager.MoveModuleRect_Linear(upRect, new Vector3(0, 1200, 0), 1));
+        StartCoroutine(moduleManager.MoveModuleRect_Linear(downRect, new Vector3(0, -900, 0), 1));
+        yield return new WaitForSecondsRealtime(1f);
         GameManager.singleTon.GameStart(isLoaded);
     }
 }

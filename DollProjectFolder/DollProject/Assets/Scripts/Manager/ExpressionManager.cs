@@ -7,10 +7,6 @@ public class ExpressionManager : MonoBehaviour
 {
     [SerializeField]
     Camera cam;
-    AudioSource cry;
-
-    [SerializeField]
-    AudioClip[] cryLevel;
 
     [SerializeField]
     GameObject parentObject;
@@ -31,15 +27,8 @@ public class ExpressionManager : MonoBehaviour
     Television television;
     bool isTouched;
 
-    public void ChangeCryingSound()
-    {
-        int level = GameManager.singleTon.saveData.smartLevel;
-        cry.clip = cryLevel[level];
-    }
-
     private void Start()
     {
-        cry = GetComponent<AudioSource>();
         isTouched = false;
     }
 
@@ -73,7 +62,7 @@ public class ExpressionManager : MonoBehaviour
         int i = 0;
         while (dialogTextNum > 0)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && GameManager.singleTon.isOptionOpen == false)
             {
                 if (dialogManager.dialogList.isParentStart) // 엄마 대화 먼저 시작 i가 짝수이면 엄마대화 홀수이면 자식대화
                 {
@@ -133,7 +122,7 @@ public class ExpressionManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && mainSceneManager.isParentAppear ==false && GameManager.singleTon.isGameEnd ==false)
+        if (Input.GetMouseButtonDown(0) && mainSceneManager.isParentAppear ==false && GameManager.singleTon.isGameEnd == false && GameManager.singleTon.isOptionOpen == false)
         {
             GameObject touchedObject;               //터치한 오브젝트
             RaycastHit2D hit;                         //터치를 위한 raycastHit
@@ -147,7 +136,7 @@ public class ExpressionManager : MonoBehaviour
                 {
                     isTouched = true;
 
-                    cry.Play();
+                    SoundManager.singleTon.CryPlay(mainSceneManager.exprLevel);
                     if (dialogManager.mainStroyNum <= 7)
                     {
                         mainSceneManager.isBalloonOn = true;

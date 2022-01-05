@@ -18,6 +18,17 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Text gameOverText;
 
+    [SerializeField]
+    GameObject optionCanvas;
+    [SerializeField]
+    GameObject creditCanvas;
+    [SerializeField]
+    GameObject muteButton;
+    [SerializeField]
+    GameObject unMuteButton;
+
+
+    public bool isOptionOpen;
     public bool isGameEnd;
     // Start is called before the first frame update
     void Awake()
@@ -36,8 +47,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        saveData = JsonManager.LoadSaveData();
+        
         isGameEnd = false;
+        isOptionOpen = false;
     }
 
     // Update is called once per frame
@@ -58,9 +70,7 @@ public class GameManager : MonoBehaviour
     void Load()
     {
         SaveDataClass loadData = JsonManager.LoadSaveData();
-        mainSceneManager.energyPoint = loadData.active;
-        mainSceneManager.watchingTV = loadData.tvPower;
-        mainSceneManager.exprLevel = loadData.smartLevel;
+
         dialogManager.mainStroyNum = loadData.currentConversationLevel;
     }
 
@@ -118,13 +128,77 @@ public class GameManager : MonoBehaviour
             saveData = new SaveDataClass();
             JsonManager.SaveJson(saveData);
         }
+        else
+        {
+            saveData = JsonManager.LoadSaveData();
+        }
         SceneManager.LoadScene(1);
         yield return null;
         if (isLoaded)
         {
+            Debug.Log("¤±¤¤¤·¤©");
             Load();
         }
 
+    }
+
+
+    public void Quit()
+    {
+        SoundManager.singleTon.ButtonPlay();
+        Application.Quit();
+    }
+
+    public void OptionActive(bool active)
+    {
+        SoundManager.singleTon.ButtonPlay();   
+        isOptionOpen = active;
+        optionCanvas.SetActive(active);
+        if (active == true)
+        {
+            Time.timeScale = 0;
+            if (mainSceneManager != null)
+            {
+                if(mainSceneManager.watchingTV == true)
+                {
+                    SoundManager.singleTon.PauseTv();
+                }
+            }
+        }
+        else
+        {
+            Time.timeScale = 1;
+            if (mainSceneManager != null)
+            {
+                if (mainSceneManager.watchingTV == true)
+                {
+                    SoundManager.singleTon.ResumeTv();
+                }
+            }
+        }
+    }
+
+    public void Mute()
+    {
+        SoundManager.singleTon.ButtonPlay();
+        muteButton.SetActive(false);
+        unMuteButton.SetActive(true);
+        SoundManager.singleTon.Mute();
+    }
+
+    public void UnMute()
+    {
+        SoundManager.singleTon.ButtonPlay();
+
+        muteButton.SetActive(true);
+        unMuteButton.SetActive(false);
+        SoundManager.singleTon.UnMute();
+    }
+
+    public void CreditActive(bool active)
+    {
+        SoundManager.singleTon.ButtonPlay();
+        creditCanvas.SetActive(active);
     }
 
     

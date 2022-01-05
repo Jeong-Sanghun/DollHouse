@@ -75,7 +75,7 @@ public class ModuleManager : MonoBehaviour
             {
                 volume.weight = timer;
                 timer += Time.deltaTime / time;
-                yield return null;
+                yield return new WaitForSecondsRealtime(Time.deltaTime) ;
             }
             volume.weight = 1;
         }
@@ -86,7 +86,7 @@ public class ModuleManager : MonoBehaviour
             {
                 volume.weight = timer;
                 timer -= Time.deltaTime / time;
-                yield return null;
+                yield return new WaitForSecondsRealtime(Time.deltaTime);
             }
             volume.weight = 0;
         }
@@ -102,11 +102,11 @@ public class ModuleManager : MonoBehaviour
         {
             newAlpha = Mathf.Lerp(i_Alpha_Initial, i_Alpha_Final, miniTimer / i_Time);
             i_image.color = new Color(i_image.color.r, i_image.color.g, i_image.color.b, newAlpha);
-            yield return null;
+            yield return new WaitForSecondsRealtime(Time.deltaTime);
             miniTimer += Time.deltaTime;
         }
         i_image.color = new Color(i_image.color.r, i_image.color.g, i_image.color.b, i_Alpha_Final);
-        yield return null;
+        yield return new WaitForSecondsRealtime(Time.deltaTime);
     }
 
     public IEnumerator FadeModule_Image(Image i_image, float i_Alpha_Initial, float i_Alpha_Final, float i_Time, bool afterActive)
@@ -196,11 +196,11 @@ public class ModuleManager : MonoBehaviour
             //newZ = Mathf.Lerp(rect.anchoredPosition.z, i_Vector.z, miniTimer / i_Time);
             newVector = new Vector2(newX, newY);
             rect.anchoredPosition = newVector;
-            yield return null;
+            yield return new WaitForSecondsRealtime(Time.deltaTime);
             miniTimer += Time.deltaTime;
         }
         rect.anchoredPosition = i_Vector;
-        yield return null;
+        yield return new WaitForSecondsRealtime(Time.deltaTime);
     }
 
 

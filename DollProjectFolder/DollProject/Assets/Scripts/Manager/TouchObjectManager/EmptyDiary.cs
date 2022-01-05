@@ -7,26 +7,26 @@ using UnityEngine;
 //ㅎㅎ
 public class EmptyDiary : TouchableObject
 {
-    [SerializeField]
-    GameObject emptyDiaryObject;
+    //[SerializeField]
+    //GameObject emptyDiaryObject;
 
-    public override void OnTouch()
-    {
-        base.OnTouch();
-        //다이어리가 켜져있으면 꺼주고, 꺼져있으면 켜준다.
-        emptyDiaryObject.SetActive(!emptyDiaryObject.activeSelf);
-        mainSceneManager.OpenTheEmptyDiary();
+    //public override void OnTouch()
+    //{
+    //    base.OnTouch();
+    //    //다이어리가 켜져있으면 꺼주고, 꺼져있으면 켜준다.
+    //    emptyDiaryObject.SetActive(!emptyDiaryObject.activeSelf);
+    //    mainSceneManager.OpenTheEmptyDiary();
 
-        if (mainSceneManager.exprLevel < 3)
-        {
-            if (mainSceneManager.openEmptyDiary)
-            {
-                Debug.Log("비어있는 일기장 열었다");
-            }
-            else
-            {
-                Debug.Log("비어있는 일기장 닫았다");
-            }
-        }
-    }
+    //    if (mainSceneManager.exprLevel < 3)
+    //    {
+    //        if (mainSceneManager.openEmptyDiary)
+    //        {
+    //            Debug.Log("비어있는 일기장 열었다");
+    //        }
+    //        else
+    //        {
+    //            Debug.Log("비어있는 일기장 닫았다");
+    //        }
+    //    }
+    //}
 }

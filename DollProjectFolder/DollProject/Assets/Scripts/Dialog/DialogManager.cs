@@ -104,5 +104,6 @@ public class DialogManager : MonoBehaviour
         dialogList = dialogParser.StoryParse("MainDialog" + dialogNo);
         mainStroyNum++;
         GameManager.singleTon.saveData.currentConversationLevel = mainStroyNum;
+        JsonManager.SaveJson(GameManager.singleTon.saveData);
     }
 }
