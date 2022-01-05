@@ -1,6 +1,6 @@
 {
     "active": 2,
     "tvPower": false,
-    "smartLevel": 3,
-    "currentConversationLevel": 5
+    "smartLevel": 0,
+    "currentConversationLevel": 1
 }

@@ -10,6 +10,7 @@ public class Television : TouchableObject
     AudioSource tvSound;
     [SerializeField]
     AudioClip[] tvSoundArray;
+
     public override void OnTouch()
     {
         base.OnTouch();
@@ -23,7 +24,7 @@ public class Television : TouchableObject
             }
             else
             {
-                tvSound.Stop();
+                SoundManager.singleTon.StopTv();
             }
         }
 
@@ -32,11 +33,7 @@ public class Television : TouchableObject
     {
         if (!mainSceneManager.watchingTV)
         {
-            if (!tvSound.isPlaying)
-            {
-                tvSound.clip = tvSoundArray[Random.Range(0, 5)];
-                tvSound.Play();
-            }
+            SoundManager.singleTon.PlayTv();
             mainSceneManager.watchingTV = true;
             float timer = 0;
 
@@ -69,10 +66,9 @@ public class Television : TouchableObject
             else
             {
                 mainSceneManager.watchingTV = false;
-                tvSound.Stop();
+                SoundManager.singleTon.StopTv();
                 televisionLightObject.SetActive(false);
-                StartCoroutine(mainSceneManager.ParentAppearCoroutine());
-                yield break;
+                //StartCoroutine(mainSceneManager.ParentAppearCoroutine());
             }
         }
     }

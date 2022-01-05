@@ -27,6 +27,9 @@ public class ExpressionManager : MonoBehaviour
     DialogManager dialogManager;
     [SerializeField]
     MainSceneManager mainSceneManager;
+    [SerializeField]
+    Television television;
+    bool isTouched;
 
     public void ChangeCryingSound()
     {
@@ -37,6 +40,7 @@ public class ExpressionManager : MonoBehaviour
     private void Start()
     {
         cry = GetComponent<AudioSource>();
+        isTouched = false;
     }
 
     IEnumerator ExpressionCor()
@@ -129,7 +133,7 @@ public class ExpressionManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && mainSceneManager.isParentAppear ==false && GameManager.singleTon.isGameEnd ==false)
         {
             GameObject touchedObject;               //터치한 오브젝트
             RaycastHit2D hit;                         //터치를 위한 raycastHit
@@ -139,9 +143,9 @@ public class ExpressionManager : MonoBehaviour
                 touchedObject = hit.collider.gameObject;
 
                 //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
-                if (touchedObject.CompareTag("Player"))
+                if (touchedObject.CompareTag("Player") && isTouched == false)
                 {
-                    Debug.Log(touchedObject.name);
+                    isTouched = true;
 
                     cry.Play();
                     if (dialogManager.mainStroyNum <= 7)
@@ -149,6 +153,10 @@ public class ExpressionManager : MonoBehaviour
                         mainSceneManager.isBalloonOn = true;
                         StartCoroutine(mainSceneManager.ParentAppearCoroutine());
                         StartCoroutine(ExpressionCor());
+                    }
+                    if(mainSceneManager.watchingTV == true)
+                    {
+                        television.OnTouch();
                     }
                 }
             }

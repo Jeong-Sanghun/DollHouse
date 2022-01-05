@@ -51,20 +51,20 @@ public class Diary : TouchableObject
                 {
                     SoundManager.singleTon.PencilSoundPlay();
                     StartCoroutine(moduleManager.LoadTextOneByOne(wholeDiaryString,
-                        diaryTextComponent, 0.05f, false));
+                        diaryTextComponent, 0.3f, false));
                 }
                 
             }
         }
-
-        isOpenedInThisScene = true;
     }
 
     public void DiaryExit()
     {
         diaryObject.SetActive(false);
         mainSceneManager.OpenTheDiary();
-        mainSceneManager.energyPoint--; //활동력 -1
+        if(isOpenedInThisScene == false)
+            mainSceneManager.energyPoint--; //활동력 -1
         mainSceneManager.Equalize();
+        isOpenedInThisScene = true;
     }
 }

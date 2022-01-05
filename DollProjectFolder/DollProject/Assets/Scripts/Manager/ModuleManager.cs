@@ -9,39 +9,37 @@ public class ModuleManager : MonoBehaviour
     // // Module // //
     public bool nowTexting;
     GameObject linearMovingObj;
-    
 
-    
+    private void Start()
+    {
+        GameManager.singleTon.moduleManager = this;
+    }
 
-    public IEnumerator LoadTextOneByOne(string inputTextString, Text inputTextUI, float eachTime = 0.05f, bool canClickSkip = true)
+
+    public IEnumerator LoadTextOneByOne(string inputTextString, Text inputTextUI, float eachTime = 0.3f, bool canClickSkip = true)
     {
         nowTexting = true;
-        float miniTimer = 0f; //타이머
-        float currentTargetNumber = 0f; // 해당 Time에 출력을 목표로 하는 최소 글자 수
         int currentNumber = 0; // 해당 Time에 출력중인 글자 수
         string displayedText = "";
         StringBuilder builder = new StringBuilder(displayedText);
-        while (currentTargetNumber < inputTextString.Length)
+        string[] inputStringSplit = inputTextString.Split(' ');
+        while (currentNumber < inputStringSplit.Length)
         {
-            while (currentNumber < currentTargetNumber)
-            { // 목표 글자수까지 출력
-                //displayedText += inputTextString.Substring(currentNumber,1);
-                builder.Append(inputTextString.Substring(currentNumber, 1));
-                currentNumber++;
-            }
+            builder.Append(inputStringSplit[currentNumber]);
+            builder.Append(" ");
+            currentNumber++;
             //inputTextUI.text = displayedText;
             inputTextUI.text = builder.ToString();
-            yield return null;
-            miniTimer += Time.deltaTime;
-            currentTargetNumber = miniTimer / eachTime;
+            yield return new WaitForSeconds(eachTime);
             if (Input.GetMouseButtonDown(0) && canClickSkip)
             {
                 break;
             }
         }
-        while (currentNumber < inputTextString.Length)
+        while (currentNumber < inputStringSplit.Length)
         { // 목표 글자수까지 출력
-            builder.Append(inputTextString.Substring(currentNumber, 1));
+            builder.Append(inputStringSplit[currentNumber]);
+            builder.Append(" ");
             currentNumber++;
         }
         inputTextUI.text = builder.ToString();

@@ -49,7 +49,8 @@ public class MainSceneManager : MonoBehaviour
     // 활동력 매일 2로 초기화 시켜준다
     public int energyPoint = 2;
     public int exprLevel;
-    bool isParentAppear = false;
+    //익스프레션 매니저에서 참조
+    public bool isParentAppear = false;
     //부모님이 등장하는 타이머. 초기값 30.
     //float parentAppearTimer = 30;
     public bool isBalloonOn;
@@ -78,11 +79,14 @@ public class MainSceneManager : MonoBehaviour
         //StartCoroutine(ParentAppearCoroutine());
         //DialogManager dialogManager = dialogManagerObj.GetComponent<DialogManager>();
         //dialogManager.RandDialog(1);
-        exprLevel = GameManager.singleTon.saveData.smartLevel;
+        //exprLevel = GameManager.singleTon.saveData.smartLevel;
+        exprLevel = 0;
         parentSprite = parentObject.GetComponent<SpriteRenderer>();
+        GameManager.singleTon.mainSceneManager = this;
     }
     public void ParentGetAngry()
     {
+        StartCoroutine(SoundManager.singleTon.BgmPitchDownCoroutine());
         parentAngryPostProcess.SetActive(true);
         parentObject.GetComponent<SpriteRenderer>().sprite = parentAngrySprite;
         background.GetComponent<SpriteRenderer>().sprite = backgroundAfter;
@@ -105,12 +109,14 @@ public class MainSceneManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         black.SetActive(true);
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(0);
+        SoundManager.singleTon.BgmPitchOne();
+        SceneManager.LoadScene(1);
 
     }
 
     public IEnumerator ParentAppearCoroutine()
     {
+       
         isParentAppear = true;
         parentObject.SetActive(true);
         parentSprite.color = new Color(1, 1, 1, 0);
@@ -188,7 +194,7 @@ public class MainSceneManager : MonoBehaviour
 
     void Update()
     {
-        if (!isBalloonOn && !isParentAppear)
+        if (!isBalloonOn && !isParentAppear && GameManager.singleTon.isGameEnd == false)
         {
             //암데나 터치했을 때.
             if (Input.GetMouseButtonDown(0))
@@ -258,6 +264,7 @@ public class MainSceneManager : MonoBehaviour
     {
         GameManager.singleTon.saveData.active = energyPoint;
         GameManager.singleTon.saveData.smartLevel = exprLevel;
+        JsonManager.SaveJson(GameManager.singleTon.saveData);
         if (energyPoint <= 0)
         {
             StartCoroutine(ParentAppearCoroutine());
