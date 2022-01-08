@@ -1510,7 +1510,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InterstitialAd__ctor_m051B7CB234EBA2B60D
 		L_0 = MobileAds_GetClientFactory_mC6AED98C5D2A57E8350B22A1CB88C3700A653AAE(/*hidden argument*/NULL);
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0 /* GoogleMobileAds.Common.IInterstitialClient GoogleMobileAds.IClientFactory::BuildInterstitialClient() */, IClientFactory_t3D75B59DB98B4B51B8FED12F623005B8C3BC48EA_il2cpp_TypeInfo_var, L_0);
+		L_1 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(2 /* GoogleMobileAds.Common.IInterstitialClient GoogleMobileAds.IClientFactory::BuildInterstitialClient() */, IClientFactory_t3D75B59DB98B4B51B8FED12F623005B8C3BC48EA_il2cpp_TypeInfo_var, L_0);
 		__this->set_client_0(L_1);
 		String_t* L_2 = ___adUnitId0;
 		__this->set_adUnitId_1(L_2);
@@ -2117,7 +2117,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MobileAds_GetMobileAdsClient_m
 		L_0 = MobileAds_GetClientFactory_mC6AED98C5D2A57E8350B22A1CB88C3700A653AAE(/*hidden argument*/NULL);
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1 /* GoogleMobileAds.Common.IMobileAdsClient GoogleMobileAds.IClientFactory::MobileAdsInstance() */, IClientFactory_t3D75B59DB98B4B51B8FED12F623005B8C3BC48EA_il2cpp_TypeInfo_var, L_0);
+		L_1 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(5 /* GoogleMobileAds.Common.IMobileAdsClient GoogleMobileAds.IClientFactory::MobileAdsInstance() */, IClientFactory_t3D75B59DB98B4B51B8FED12F623005B8C3BC48EA_il2cpp_TypeInfo_var, L_0);
 		return L_1;
 	}
 }

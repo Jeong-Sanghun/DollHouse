@@ -13,9 +13,10 @@ ScriptsOnlyBuild:
     - SoundManager
     - StartSceneManager
     - Television
+    GoogleMobileAds.Common.dll:
+    - GoogleMobileAds.Common.MobileAdsEventExecutor
     GoogleMobileAds.Editor.dll:
     - GoogleMobileAds.Editor.GoogleMobileAdsSettings
-    - GoogleMobileAds.Editor.GoogleMobileAdsSettingsEditor
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -55,8 +56,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -109,51 +112,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1612}
     - Class: 114
-      Script: {instanceID: 1714}
+      Script: {instanceID: 1712}
     - Class: 114
-      Script: {instanceID: 1804}
+      Script: {instanceID: 1802}
     - Class: 114
-      Script: {instanceID: 1818}
+      Script: {instanceID: 1816}
     - Class: 114
-      Script: {instanceID: 1900}
+      Script: {instanceID: 1898}
     - Class: 114
-      Script: {instanceID: 2324}
+      Script: {instanceID: 2322}
     - Class: 114
-      Script: {instanceID: 2544}
+      Script: {instanceID: 2542}
     - Class: 114
-      Script: {instanceID: 2594}
+      Script: {instanceID: 2592}
     - Class: 114
-      Script: {instanceID: 2750}
+      Script: {instanceID: 2748}
     - Class: 114
-      Script: {instanceID: 2902}
+      Script: {instanceID: 2900}
     - Class: 114
-      Script: {instanceID: 3068}
+      Script: {instanceID: 3066}
     - Class: 114
-      Script: {instanceID: 3088}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3140}
+      Script: {instanceID: 3138}
     - Class: 114
-      Script: {instanceID: 3316}
+      Script: {instanceID: 3314}
     - Class: 114
-      Script: {instanceID: 3914}
+      Script: {instanceID: 3912}
     - Class: 114
-      Script: {instanceID: 4128}
+      Script: {instanceID: 4126}
     - Class: 114
-      Script: {instanceID: 4506}
+      Script: {instanceID: 4504}
     - Class: 114
-      Script: {instanceID: 4738}
+      Script: {instanceID: 4736}
     - Class: 114
-      Script: {instanceID: 5032}
+      Script: {instanceID: 5030}
     - Class: 114
-      Script: {instanceID: 5068}
+      Script: {instanceID: 5066}
     - Class: 114
-      Script: {instanceID: 5158}
+      Script: {instanceID: 5156}
     - Class: 114
-      Script: {instanceID: 5364}
+      Script: {instanceID: 5362}
     - Class: 114
-      Script: {instanceID: 5532}
+      Script: {instanceID: 5530}
     - Class: 114
-      Script: {instanceID: 5554}
+      Script: {instanceID: 5552}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -200,39 +203,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1612}
     - Class: 114
-      Script: {instanceID: 1680}
+      Script: {instanceID: 1678}
     - Class: 114
-      Script: {instanceID: 2028}
+      Script: {instanceID: 2026}
     - Class: 114
-      Script: {instanceID: 2040}
+      Script: {instanceID: 2038}
     - Class: 114
-      Script: {instanceID: 2136}
+      Script: {instanceID: 2134}
     - Class: 114
-      Script: {instanceID: 2324}
+      Script: {instanceID: 2322}
     - Class: 114
-      Script: {instanceID: 2594}
+      Script: {instanceID: 2592}
     - Class: 114
-      Script: {instanceID: 2750}
+      Script: {instanceID: 2748}
     - Class: 114
-      Script: {instanceID: 2902}
+      Script: {instanceID: 2900}
     - Class: 114
-      Script: {instanceID: 3088}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3316}
+      Script: {instanceID: 3314}
     - Class: 114
-      Script: {instanceID: 3434}
+      Script: {instanceID: 3432}
     - Class: 114
-      Script: {instanceID: 4506}
+      Script: {instanceID: 4504}
     - Class: 114
-      Script: {instanceID: 4738}
+      Script: {instanceID: 4736}
     - Class: 114
-      Script: {instanceID: 5032}
+      Script: {instanceID: 5030}
     - Class: 114
-      Script: {instanceID: 5068}
+      Script: {instanceID: 5066}
     - Class: 114
-      Script: {instanceID: 5364}
+      Script: {instanceID: 5362}
     - Class: 114
-      Script: {instanceID: 5554}
+      Script: {instanceID: 5552}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -326,7 +329,7 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
-      Hash: a6351b27f626687b72f84494e07f0d24
+      Hash: 941996478e9bc3bd7330961acec9c648
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Locket
@@ -368,7 +371,7 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 0394fa2301edaa6913fc1a069db2197c
+      Hash: 103493908b1937437f7c55ea3735e13a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainSceneManager
@@ -1000,4 +1003,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/GithubDesktop/DollHouse/Build/220105-5.aab
+  playerPath: C:/GithubDesktop/DollHouse/Build/220108-0.aab

@@ -15,11 +15,11 @@ C:/GithubDesktop/DollHouse/DollProjectFolder/DollProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62906
+64673
 Successfully changed project path to: C:/GithubDesktop/DollHouse/DollProjectFolder/DollProject
 C:/GithubDesktop/DollHouse/DollProjectFolder/DollProject
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 105.03 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 92.44 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path C:/UnityEditor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
@@ -35,149 +35,1556 @@ Initialize mono
 Mono path[0] = 'C:/UnityEditor/2020.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/UnityEditor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/UnityEditor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56628
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56112
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/UnityEditor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004650 seconds.
+Registered in 0.003804 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 60.29 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 48.69 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.285 seconds
+- Completed reload, in  3.044 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.014426 seconds.
+Registered in 0.011968 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 56.54 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 60.35 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.497 seconds
+- Completed reload, in  1.313 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 1.38 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 1.41 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2011 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 96.9 MB.
 System memory in use after: 96.9 MB.
 
 Unloading 82 unused Assets to reduce memory usage. Loaded Objects now: 2408.
-Total: 4.710200 ms (FindLiveObjects: 0.382100 ms CreateObjectMapping: 0.249000 ms MarkObjects: 3.926800 ms  DeleteObjects: 0.150000 ms)
+Total: 3.150600 ms (FindLiveObjects: 0.482700 ms CreateObjectMapping: 0.262200 ms MarkObjects: 2.267700 ms  DeleteObjects: 0.136400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/MainScene.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd07545640020aa3bd310e01ef051b6c') in 0.026429 seconds
-  Import took 0.031876 seconds .
+  path: Assets/Sprites/Background/anim/backgroundAnim.anim
+  artifactKey: Guid(b8d5f60627bfeca46953115d3e72c01d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/backgroundAnim.anim using Guid(b8d5f60627bfeca46953115d3e72c01d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e66f420fafcfb8e35f356320e6ca0107') in 0.096091 seconds
+  Import took 0.101358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.320818 seconds.
+  path: Assets/Sprites/Background/anim/화면전환24.png
+  artifactKey: Guid(b6ab5cd247c8a3541a54469af31cc624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환24.png using Guid(b6ab5cd247c8a3541a54469af31cc624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e74d342c7f3c765d3cf91016bd43c34') in 0.236123 seconds
+  Import took 0.241642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000398 seconds.
+  path: Assets/Sprites/Background/anim/화면전환45.png
+  artifactKey: Guid(a0b6fa50b54ddbd44a215b9b07d0e780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환45.png using Guid(a0b6fa50b54ddbd44a215b9b07d0e780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1505ed862104dabb94bba2fddbbff9e9') in 0.042551 seconds
+  Import took 0.046745 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000795 seconds.
+  path: Assets/Sprites/Background/anim/화면전환28.png
+  artifactKey: Guid(d45bbf967bdfd61488d24596dd73e883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환28.png using Guid(d45bbf967bdfd61488d24596dd73e883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0de14bd43059c2d018fc6b58a6d35073') in 0.019565 seconds
+  Import took 0.024713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000501 seconds.
+  path: Assets/Sprites/Background/anim/화면전환43.png
+  artifactKey: Guid(e47286aa09fae574d93d12d80f157d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환43.png using Guid(e47286aa09fae574d93d12d80f157d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8081b9a81d52c5dbcc61f6605ef36c53') in 0.042794 seconds
+  Import took 0.047120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Sprites/Background/anim/화면전환58.png
+  artifactKey: Guid(84eeacfb35171e44689ba248ee804e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환58.png using Guid(84eeacfb35171e44689ba248ee804e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26680a6838240cde980380d93235dacb') in 0.048927 seconds
+  Import took 0.052567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Sprites/Background/anim/화면전환29.png
+  artifactKey: Guid(ab9a423b7193bbe4ea7d8f5a71b131ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환29.png using Guid(ab9a423b7193bbe4ea7d8f5a71b131ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc06a8a58a8c325a0c520bfaa5784435') in 0.019949 seconds
+  Import took 0.024507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000323 seconds.
+  path: Assets/Sprites/Background/anim/화면전환38.png
+  artifactKey: Guid(ddf4810d11a20074dad8d180a8dbbd13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환38.png using Guid(ddf4810d11a20074dad8d180a8dbbd13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1146d24114ced6eadf90a99079e6a70') in 0.019320 seconds
+  Import took 0.023481 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000335 seconds.
+  path: Assets/Sprites/Background/anim/화면전환27.png
+  artifactKey: Guid(5742f833ee99856419c83aee4c08e678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환27.png using Guid(5742f833ee99856419c83aee4c08e678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0f41011bac95f925c5727faad350d14') in 0.040423 seconds
+  Import took 0.045355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000407 seconds.
+  path: Assets/Sprites/Background/anim/화면전환35.png
+  artifactKey: Guid(7566d4de232d75b48ac91d6dba9312bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환35.png using Guid(7566d4de232d75b48ac91d6dba9312bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c65e24761caee11923845237f31731db') in 0.020466 seconds
+  Import took 0.024404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000364 seconds.
+  path: Assets/Sprites/Background/anim/화면전환49.png
+  artifactKey: Guid(7e81fdee8c063d140b1e5bb3356d8a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환49.png using Guid(7e81fdee8c063d140b1e5bb3356d8a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73f3839d003c623fe9a9a0668ff0260b') in 0.022901 seconds
+  Import took 0.027866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000500 seconds.
+  path: Assets/Sprites/Background/anim/화면전환00.png
+  artifactKey: Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환00.png using Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f999f884768e0526802c9daa6152854') in 0.021564 seconds
+  Import took 0.026303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Sprites/Background/anim/화면전환50.png
+  artifactKey: Guid(a8cc4125b060e0547898c06a883ec0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환50.png using Guid(a8cc4125b060e0547898c06a883ec0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ffee0e2a387eb8ea6c56759c124398c') in 0.020585 seconds
+  Import took 0.024522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Sprites/Background/anim/화면전환48.png
+  artifactKey: Guid(bc15a1e5e75b13949a10aeea797317e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환48.png using Guid(bc15a1e5e75b13949a10aeea797317e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c21ad0a22183cacaa8e66557ad41f0e2') in 0.025005 seconds
+  Import took 0.028814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000406 seconds.
+  path: Assets/Sprites/Background/anim/화면전환31.png
+  artifactKey: Guid(9fc6220ee2c305543ae17a9b50c4a177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환31.png using Guid(9fc6220ee2c305543ae17a9b50c4a177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db0bd5520d0e5bc30d153e91f093a585') in 0.026600 seconds
+  Import took 0.031579 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Sprites/Background/anim/화면전환41.png
+  artifactKey: Guid(8d60efee4b971b24b891af481f142602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환41.png using Guid(8d60efee4b971b24b891af481f142602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dedd553d1dc0fb0594947fe61f1721f') in 0.044801 seconds
+  Import took 0.050164 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/Sprites/Background/anim/화면전환51.png
+  artifactKey: Guid(0a61b6e8b366196428507d022a279736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환51.png using Guid(0a61b6e8b366196428507d022a279736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '985ebc257af29abcdc406147089c1658') in 0.022800 seconds
+  Import took 0.028277 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Sprites/Background/anim/화면전환44.png
+  artifactKey: Guid(5ff87770a7ecd71478a8d62fe6a618d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환44.png using Guid(5ff87770a7ecd71478a8d62fe6a618d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cba3dc2960b4383ec96480c91451298') in 0.019239 seconds
+  Import took 0.022830 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Sprites/Background/anim/화면전환40.png
+  artifactKey: Guid(a0e8cb0a5fd6c554093312c911899d52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환40.png using Guid(a0e8cb0a5fd6c554093312c911899d52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c555f35aeaf74e3b5bef5a4b44eed55') in 0.041634 seconds
+  Import took 0.045948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Sprites/Background/anim/화면전환37.png
+  artifactKey: Guid(34561bba5bfed2b4b9318c20998781a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환37.png using Guid(34561bba5bfed2b4b9318c20998781a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20bde79f7f4a0f39821dd3970af2a8c0') in 0.020717 seconds
+  Import took 0.024575 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000856 seconds.
+  path: Assets/Sprites/Background/anim/화면전환47.png
+  artifactKey: Guid(cfcff18fb97ed3c4aa7e458d65f78007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환47.png using Guid(cfcff18fb97ed3c4aa7e458d65f78007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb9a4a15e418bba9f8b4d9407e96dac6') in 0.023320 seconds
+  Import took 0.027458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000345 seconds.
+  path: Assets/Sprites/Background/anim/화면전환42.png
+  artifactKey: Guid(187e71e36407d4e419c07a391fb8551f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환42.png using Guid(187e71e36407d4e419c07a391fb8551f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d0decf9d61ad0008eaefb9f2642b2a8') in 0.047280 seconds
+  Import took 0.052018 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000323 seconds.
+  path: Assets/Sprites/Background/anim/화면전환25.png
+  artifactKey: Guid(d98d1d4bf2a0ed140b4d8e340a33e1f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환25.png using Guid(d98d1d4bf2a0ed140b4d8e340a33e1f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43e7c65b189741764554c50ced04dee0') in 0.024265 seconds
+  Import took 0.028733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Sprites/Background/anim/화면전환36.png
+  artifactKey: Guid(6bf2cc94b7fef5e41b1778ca891ca75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환36.png using Guid(6bf2cc94b7fef5e41b1778ca891ca75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f39181c1765218faa857f3ea256ec4d7') in 0.025267 seconds
+  Import took 0.029504 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/Sprites/Background/anim/화면전환39.png
+  artifactKey: Guid(9f874999a0876794c856b56c18abc609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환39.png using Guid(9f874999a0876794c856b56c18abc609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '362e821992ed0ca9ae3f1942c08ed998') in 0.033960 seconds
+  Import took 0.039101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/Sprites/Background/anim/화면전환46.png
+  artifactKey: Guid(ba6bdaed03fbb4a44a2d401a61bbec0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환46.png using Guid(ba6bdaed03fbb4a44a2d401a61bbec0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '907bfb5219d9c7d45c625467667d2bb2') in 0.019539 seconds
+  Import took 0.024753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/Sprites/Background/anim/화면전환56.png
+  artifactKey: Guid(66c27d12325416b4195aa682341751cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환56.png using Guid(66c27d12325416b4195aa682341751cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd072973cc33ba32ab9ba0746f68d43') in 0.042764 seconds
+  Import took 0.046165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Sprites/Background/anim/화면전환32.png
+  artifactKey: Guid(14300f69a62b3b647afe9115e1a8d5ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환32.png using Guid(14300f69a62b3b647afe9115e1a8d5ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e99769017a6ddb38f05435f279ad117') in 0.022194 seconds
+  Import took 0.027662 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/Sprites/Background/anim/화면전환30.png
+  artifactKey: Guid(114c5664329957e418fe0bf92cc44918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환30.png using Guid(114c5664329957e418fe0bf92cc44918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd503053a57923f84dd02cc5f2aa3c330') in 0.022270 seconds
+  Import took 0.026584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/Sprites/Background/anim/화면전환53.png
+  artifactKey: Guid(24cd436ce7a02dc439951445b140d42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환53.png using Guid(24cd436ce7a02dc439951445b140d42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '160277eb7da2bea9346c0e450e045894') in 0.020338 seconds
+  Import took 0.023901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000414 seconds.
+  path: Assets/Sprites/Background/anim/화면전환52.png
+  artifactKey: Guid(85531c895a244fa45a6a5e3d76e5374f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환52.png using Guid(85531c895a244fa45a6a5e3d76e5374f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccf70d4127de8d2110cdbf4a1cc717fa') in 0.024494 seconds
+  Import took 0.029522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/Sprites/Background/anim/화면전환57.png
+  artifactKey: Guid(22bab162c5ed8804d814b58d47f7964e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환57.png using Guid(22bab162c5ed8804d814b58d47f7964e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '054c8b5a11511cd601285ba6906c597d') in 0.043493 seconds
+  Import took 0.046872 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/Sprites/Background/anim/화면전환26.png
+  artifactKey: Guid(9bfd0726e8b3c414e8c971b871fa812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환26.png using Guid(9bfd0726e8b3c414e8c971b871fa812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56904aa2e1a5f9858998e5a7f69365dd') in 0.019250 seconds
+  Import took 0.022695 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Sprites/Background/anim/화면전환33.png
+  artifactKey: Guid(ba82170d2f1574c48b2149b704f50fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환33.png using Guid(ba82170d2f1574c48b2149b704f50fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '397177138cb13b05d7c54b30c037472d') in 0.023398 seconds
+  Import took 0.027357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Sprites/Background/anim/화면전환59.png
+  artifactKey: Guid(100e1a1a6a2821f4fa41b9da2bc4cfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환59.png using Guid(100e1a1a6a2821f4fa41b9da2bc4cfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b02425baaf81f2d609610077abcb4f3e') in 0.020868 seconds
+  Import took 0.026848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000419 seconds.
+  path: Assets/Sprites/Background/anim/화면전환55.png
+  artifactKey: Guid(56b3286623757ea43ace0105e80d629a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환55.png using Guid(56b3286623757ea43ace0105e80d629a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b40db0603eea4219d993197b0a89e411') in 0.036963 seconds
+  Import took 0.041040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Sprites/Background/anim/화면전환54.png
+  artifactKey: Guid(b9964b7e4bb509945bb79b3416d7a982) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환54.png using Guid(b9964b7e4bb509945bb79b3416d7a982) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e94668267b648bbec36a7c64ed13072') in 0.024155 seconds
+  Import took 0.028963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/Sprites/Background/anim/화면전환34.png
+  artifactKey: Guid(b41ff59c352a69b48a63162afa263846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환34.png using Guid(b41ff59c352a69b48a63162afa263846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e3ac1f66bf4ab6888f0cf7f8dc7763') in 0.022352 seconds
+  Import took 0.027076 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.026401 seconds.
+Registered in 0.014810 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.44 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.89 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.325 seconds
+- Completed reload, in  1.218 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1982 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.7 MB.
-System memory in use after: 94.7 MB.
+System memory in use before: 97.7 MB.
+System memory in use after: 97.7 MB.
 
-Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2412.
-Total: 3.355900 ms (FindLiveObjects: 0.330000 ms CreateObjectMapping: 0.124200 ms MarkObjects: 2.680900 ms  DeleteObjects: 0.219000 ms)
+Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2418.
+Total: 2.722000 ms (FindLiveObjects: 0.361200 ms CreateObjectMapping: 0.162200 ms MarkObjects: 2.037400 ms  DeleteObjects: 0.159700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
+Received Import Request.
+  Time since last request: 25582.014212 seconds.
+  path: Assets/PostProcessing/PostProcess Profile.asset
+  artifactKey: Guid(79c4ece9a75641e4291cac21063e1cb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PostProcessing/PostProcess Profile.asset using Guid(79c4ece9a75641e4291cac21063e1cb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afd30265f1c8caa27fad3e7ce1b037f1') in 0.042359 seconds
+  Import took 0.047530 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.287658 seconds.
+  path: Assets/Resources/MainDialog1.txt
+  artifactKey: Guid(4d5e0f68d5f00b943b6e1f606dc1ca68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/MainDialog1.txt using Guid(4d5e0f68d5f00b943b6e1f606dc1ca68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d587ac9fabbf8f37233108dc34714c3') in 0.024965 seconds
+  Import took 0.030957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 199.369526 seconds.
+  path: Assets/Resources/MainDialog1.txt
+  artifactKey: Guid(4d5e0f68d5f00b943b6e1f606dc1ca68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/MainDialog1.txt using Guid(4d5e0f68d5f00b943b6e1f606dc1ca68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8afb8f69ac44c849aa6ef7c7cf68e46') in 0.011168 seconds
+  Import took 0.018292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.413428 seconds.
+  path: Assets/TextAsset
+  artifactKey: Guid(e90fc5f08c97ec54ba6d3b22a48595df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextAsset using Guid(e90fc5f08c97ec54ba6d3b22a48595df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33aea4c59f2e608f1398afb09ab193b2') in 0.017699 seconds
+  Import took 0.022565 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.812621 seconds.
+  path: Assets/TextAsset/일기장.txt
+  artifactKey: Guid(6dd9b22934a5ebc498eec376717b10b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextAsset/일기장.txt using Guid(6dd9b22934a5ebc498eec376717b10b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0249bf139118bfd9a57ce60fd01b6073') in 0.019820 seconds
+  Import took 0.024862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.757975 seconds.
+  path: Assets/TextAsset/일기장.txt
+  artifactKey: Guid(6dd9b22934a5ebc498eec376717b10b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextAsset/일기장.txt using Guid(6dd9b22934a5ebc498eec376717b10b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '828c3c3dcd251143d2be7a94c60a1236') in 0.008066 seconds
+  Import took 0.013900 seconds .
+
+========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.020635 seconds.
+Registered in 0.123775 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.17 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.362 seconds
+- Completed reload, in  2.272 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
 Refreshing native plugins compatible for Editor in 0.83 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1982 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.7 MB.
-System memory in use after: 94.7 MB.
+System memory in use before: 97.8 MB.
+System memory in use after: 97.8 MB.
 
-Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2416.
-Total: 2.566100 ms (FindLiveObjects: 0.269800 ms CreateObjectMapping: 0.082600 ms MarkObjects: 2.072100 ms  DeleteObjects: 0.140200 ms)
+Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2422.
+Total: 4.739600 ms (FindLiveObjects: 0.318700 ms CreateObjectMapping: 0.234100 ms MarkObjects: 4.010700 ms  DeleteObjects: 0.174500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
+Received Import Request.
+  Time since last request: 137.085247 seconds.
+  path: Assets/Scenes/MainScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17f3866a5cdadb92cb545b0044b22b21') in 0.029265 seconds
+  Import took 0.035510 seconds .
+
+========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.042656 seconds.
+Registered in 0.019919 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.79 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.168 seconds
+- Completed reload, in  2.215 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1982 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.8 MB.
-System memory in use after: 94.8 MB.
+System memory in use before: 97.8 MB.
+System memory in use after: 97.8 MB.
 
-Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2420.
-Total: 2.797300 ms (FindLiveObjects: 0.220000 ms CreateObjectMapping: 0.109600 ms MarkObjects: 2.314200 ms  DeleteObjects: 0.152400 ms)
+Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2426.
+Total: 2.496200 ms (FindLiveObjects: 0.288500 ms CreateObjectMapping: 0.090700 ms MarkObjects: 1.989100 ms  DeleteObjects: 0.126800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Import Request.
-  Time since last request: 196.362000 seconds.
-  path: Assets/Scenes/StartScene.unity
-  artifactKey: Guid(200438d9179ce354c962f85f78a34744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/StartScene.unity using Guid(200438d9179ce354c962f85f78a34744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1bbe75e41252514ff4bf3d8a4893b0b') in 0.029459 seconds
-  Import took 0.035153 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014270 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.881 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1982 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.8 MB.
+System memory in use after: 97.8 MB.
+
+Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2430.
+Total: 3.245900 ms (FindLiveObjects: 0.343800 ms CreateObjectMapping: 0.105500 ms MarkObjects: 2.539200 ms  DeleteObjects: 0.255500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013234 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.219 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.83 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1982 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.8 MB.
+System memory in use after: 97.8 MB.
+
+Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2434.
+Total: 2.317000 ms (FindLiveObjects: 0.241300 ms CreateObjectMapping: 0.083900 ms MarkObjects: 1.848400 ms  DeleteObjects: 0.142000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 778.14 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 69 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.2 MB.
+System memory in use after: 60.2 MB.
+
+Unloading 69 unused Assets to reduce memory usage. Loaded Objects now: 2434.
+Total: 2.640600 ms (FindLiveObjects: 0.335200 ms CreateObjectMapping: 0.115500 ms MarkObjects: 2.050400 ms  DeleteObjects: 0.138200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.261625 seconds.
-  path: Assets/Scenes/MainScene.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92f519e7c1566243317c3cd4a63b2dfe') in 0.008388 seconds
-  Import took 0.014402 seconds .
+  Time since last request: 555.609893 seconds.
+  path: Assets/Sound/BGM/학프.mp3
+  artifactKey: Guid(9f067b8d53ad01e4ca3d79073a30a89e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/BGM/학프.mp3 using Guid(9f067b8d53ad01e4ca3d79073a30a89e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5998d7fa1faee6e024239964329173c') in 0.158632 seconds
+  Import took 0.170693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.737541 seconds.
+  path: Assets/Sprites/Background/anim/화면전환01.png
+  artifactKey: Guid(9441718ea26d80d42a559a73dd55e2a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환01.png using Guid(9441718ea26d80d42a559a73dd55e2a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b440e9ef01b3c2e767cddb74ecd448f9') in 0.136105 seconds
+  Import took 0.140760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/Sprites/Background/anim/화면전환11.png
+  artifactKey: Guid(8dd05baf0bcbe584887efa1b1cabe19a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환11.png using Guid(8dd05baf0bcbe584887efa1b1cabe19a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36d96cc7751d231c1c5de926dd11010f') in 0.047590 seconds
+  Import took 0.051796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000780 seconds.
+  path: Assets/Sprites/Background/anim/화면전환19.png
+  artifactKey: Guid(25daf3f05e9033846a155b2173be0d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환19.png using Guid(25daf3f05e9033846a155b2173be0d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6991996b8b662dca6cb50a7b09864eed') in 0.633225 seconds
+  Import took 0.640568 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000376 seconds.
+  path: Assets/Sprites/Background/anim/화면전환10.png
+  artifactKey: Guid(bea59e2664ba3a74183acb480ea773d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환10.png using Guid(bea59e2664ba3a74183acb480ea773d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f6da368c490787ead9e2d636eccf0a3') in 0.032213 seconds
+  Import took 0.035730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000582 seconds.
+  path: Assets/Sprites/Background/anim/화면전환12.png
+  artifactKey: Guid(96ca9b72ae63e064ab7e8b0e5dc80642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환12.png using Guid(96ca9b72ae63e064ab7e8b0e5dc80642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecc5b85fab60a1c5867a40f556413019') in 0.051450 seconds
+  Import took 0.055344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/Sprites/Background/anim/화면전환04.png
+  artifactKey: Guid(6ae9f01fd6197434fbd643901e257624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환04.png using Guid(6ae9f01fd6197434fbd643901e257624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d68769be8bad029a61867c3fea52aea') in 0.033863 seconds
+  Import took 0.038106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000335 seconds.
+  path: Assets/Sprites/Background/anim/화면전환07.png
+  artifactKey: Guid(da361a18d921cf544bf6d90d0782c33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환07.png using Guid(da361a18d921cf544bf6d90d0782c33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61644c94ace90c0862718a85f25cbcf1') in 0.030939 seconds
+  Import took 0.035922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000344 seconds.
+  path: Assets/Sprites/Background/anim/화면전환08.png
+  artifactKey: Guid(aedd1653524e8a848b7a058d5285ddad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환08.png using Guid(aedd1653524e8a848b7a058d5285ddad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea73732ffb65ae631eb0627d8c75db52') in 0.034151 seconds
+  Import took 0.038270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/Sprites/Background/anim/화면전환15.png
+  artifactKey: Guid(70ab568a462a54847b790d353edf771d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환15.png using Guid(70ab568a462a54847b790d353edf771d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bc95aa8b8ad6e6c85685d99b92883bc') in 0.030706 seconds
+  Import took 0.034219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/Sprites/Background/anim/화면전환20.png
+  artifactKey: Guid(195dffa5b796a2a469891212b36b4522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환20.png using Guid(195dffa5b796a2a469891212b36b4522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6a8b8da0774806b33fcb22c1a82090a') in 0.028651 seconds
+  Import took 0.032744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/Sprites/Background/anim/화면전환22.png
+  artifactKey: Guid(eed1fb672b5ebed45be00e86a0136c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환22.png using Guid(eed1fb672b5ebed45be00e86a0136c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61319d22dea59955d7c19e8031730c24') in 0.032209 seconds
+  Import took 0.037126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/Sprites/Background/anim/화면전환03.png
+  artifactKey: Guid(5911db5f3bc1770448168c8c6b5a3296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환03.png using Guid(5911db5f3bc1770448168c8c6b5a3296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '388239bd29b36c5d74d0401affa35bdf') in 0.032504 seconds
+  Import took 0.037198 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/Sprites/Background/anim/화면전환02.png
+  artifactKey: Guid(9b63a260830fbdc40acbc77a19dae6e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환02.png using Guid(9b63a260830fbdc40acbc77a19dae6e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d00606de9882a6c399b31821d037d9f') in 0.031557 seconds
+  Import took 0.035820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000339 seconds.
+  path: Assets/Sprites/Background/anim/화면전환16.png
+  artifactKey: Guid(51d3f467a5009e24a9b150a091fa7f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환16.png using Guid(51d3f467a5009e24a9b150a091fa7f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fba7acdc1afa639ba81542c3d9469f9') in 0.039856 seconds
+  Import took 0.045131 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000420 seconds.
+  path: Assets/Sprites/Background/anim/화면전환05.png
+  artifactKey: Guid(1a9fbd1cbc3181b439673ec39ae3379d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환05.png using Guid(1a9fbd1cbc3181b439673ec39ae3379d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f568ec438e9a722672d8e0745f37811') in 0.038398 seconds
+  Import took 0.044632 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/Sprites/Background/anim/화면전환09.png
+  artifactKey: Guid(d1193aad311f49e4890559dc4707b56a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환09.png using Guid(d1193aad311f49e4890559dc4707b56a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9c1308555345f0011401d0d61da3198') in 0.038344 seconds
+  Import took 0.045550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000376 seconds.
+  path: Assets/Sprites/Background/anim/화면전환17.png
+  artifactKey: Guid(9af0a1933db2b7b42a7c6ab33192969d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환17.png using Guid(9af0a1933db2b7b42a7c6ab33192969d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e00df0a8bbdf812ebb879914b865d323') in 0.040672 seconds
+  Import took 0.045713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/Sprites/Background/anim/화면전환13.png
+  artifactKey: Guid(4f3190c822103ec43a57c2bd7b13f10d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환13.png using Guid(4f3190c822103ec43a57c2bd7b13f10d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cc14d825085b658b046a808ea574a93') in 0.041982 seconds
+  Import took 0.047331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000691 seconds.
+  path: Assets/Sprites/Background/anim/화면전환14.png
+  artifactKey: Guid(a6e7837627d06ab46b5a9d5495123ceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환14.png using Guid(a6e7837627d06ab46b5a9d5495123ceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b65ccc58e872042f04f8d94a4099a09') in 0.041707 seconds
+  Import took 0.047196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/Sprites/Background/anim/화면전환06.png
+  artifactKey: Guid(e76b7683e4fca6240b76a981bac2e895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환06.png using Guid(e76b7683e4fca6240b76a981bac2e895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c42d9d1f13c9b7e4ba899c2b18fced7c') in 0.037892 seconds
+  Import took 0.041762 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/Sprites/Background/anim/화면전환21.png
+  artifactKey: Guid(2c7096bbfd788b9449fa6be1c6728acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환21.png using Guid(2c7096bbfd788b9449fa6be1c6728acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dc1385d3300c6c8f9c3e248ef4bf36d') in 0.043423 seconds
+  Import took 0.047957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/Sprites/Background/anim/화면전환23.png
+  artifactKey: Guid(46a976ebb34c98b4f81a94367ab92043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환23.png using Guid(46a976ebb34c98b4f81a94367ab92043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae571366236f8ec436296bc34eb415e9') in 0.101968 seconds
+  Import took 0.106991 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000346 seconds.
+  path: Assets/Sprites/Background/anim/화면전환18.png
+  artifactKey: Guid(cfa5b5b24f4464d4bb6ede8fe5d7f220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환18.png using Guid(cfa5b5b24f4464d4bb6ede8fe5d7f220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43d104530d993897051b7fd3d5441b5c') in 0.035226 seconds
+  Import took 0.039926 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 50.233801 seconds.
+  path: Assets/Sprites/Background/anim/화면전환00.png
+  artifactKey: Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환00.png using Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bd0e784c37ad30eece1746fbd497012') in 0.042020 seconds
+  Import took 0.046860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001472 seconds.
+  path: Assets/Sprites/Background/anim/화면전환24.png
+  artifactKey: Guid(b6ab5cd247c8a3541a54469af31cc624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환24.png using Guid(b6ab5cd247c8a3541a54469af31cc624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb57386958f9407e8d0812dc769260b4') in 0.059646 seconds
+  Import took 0.063399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/Sprites/Background/anim/화면전환45.png
+  artifactKey: Guid(a0b6fa50b54ddbd44a215b9b07d0e780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환45.png using Guid(a0b6fa50b54ddbd44a215b9b07d0e780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e9502a54154518282e22cb4487d62c') in 0.050045 seconds
+  Import took 0.054904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000390 seconds.
+  path: Assets/Sprites/Background/anim/화면전환28.png
+  artifactKey: Guid(d45bbf967bdfd61488d24596dd73e883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환28.png using Guid(d45bbf967bdfd61488d24596dd73e883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9d39a5389d6f6f2fd02f20018ca1749') in 0.047217 seconds
+  Import took 0.051520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Assets/Sprites/Background/anim/화면전환43.png
+  artifactKey: Guid(e47286aa09fae574d93d12d80f157d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환43.png using Guid(e47286aa09fae574d93d12d80f157d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a946c8e698033b9b2d329f57c4eaea5d') in 0.049257 seconds
+  Import took 0.054275 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000357 seconds.
+  path: Assets/Sprites/Background/anim/화면전환58.png
+  artifactKey: Guid(84eeacfb35171e44689ba248ee804e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환58.png using Guid(84eeacfb35171e44689ba248ee804e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b59ca6d7b3276489f03f4068e48b862c') in 0.051473 seconds
+  Import took 0.057216 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Sprites/Background/anim/화면전환29.png
+  artifactKey: Guid(ab9a423b7193bbe4ea7d8f5a71b131ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환29.png using Guid(ab9a423b7193bbe4ea7d8f5a71b131ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '265adb3cc8ce42bab82bea565fe91464') in 0.038825 seconds
+  Import took 0.044489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Sprites/Background/anim/화면전환38.png
+  artifactKey: Guid(ddf4810d11a20074dad8d180a8dbbd13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환38.png using Guid(ddf4810d11a20074dad8d180a8dbbd13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19293b6698939b20178844da0390fc2c') in 0.032035 seconds
+  Import took 0.036175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/Sprites/Background/anim/화면전환27.png
+  artifactKey: Guid(5742f833ee99856419c83aee4c08e678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환27.png using Guid(5742f833ee99856419c83aee4c08e678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ffabd2ba51b8a75c70ee56ed2c47458') in 0.043604 seconds
+  Import took 0.049357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Assets/Sprites/Background/anim/화면전환35.png
+  artifactKey: Guid(7566d4de232d75b48ac91d6dba9312bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환35.png using Guid(7566d4de232d75b48ac91d6dba9312bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf31c2cffe40fecd8cffad588a09c741') in 0.037697 seconds
+  Import took 0.044766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000688 seconds.
+  path: Assets/Sprites/Background/anim/화면전환49.png
+  artifactKey: Guid(7e81fdee8c063d140b1e5bb3356d8a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환49.png using Guid(7e81fdee8c063d140b1e5bb3356d8a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a37ec17b101080449fc2a8cf4502e74') in 0.030237 seconds
+  Import took 0.034875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Sprites/Background/anim/화면전환50.png
+  artifactKey: Guid(a8cc4125b060e0547898c06a883ec0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환50.png using Guid(a8cc4125b060e0547898c06a883ec0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dcd1184337542a4d57e5631055e4c89') in 0.034281 seconds
+  Import took 0.038340 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/Sprites/Background/anim/화면전환48.png
+  artifactKey: Guid(bc15a1e5e75b13949a10aeea797317e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환48.png using Guid(bc15a1e5e75b13949a10aeea797317e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e952c51e1a00b3728c52b4b63bd12fa') in 0.029023 seconds
+  Import took 0.033219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/Sprites/Background/anim/화면전환31.png
+  artifactKey: Guid(9fc6220ee2c305543ae17a9b50c4a177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환31.png using Guid(9fc6220ee2c305543ae17a9b50c4a177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a3d788686a640cd51da9cf4ef44d4a2') in 0.042938 seconds
+  Import took 0.046574 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Sprites/Background/anim/화면전환41.png
+  artifactKey: Guid(8d60efee4b971b24b891af481f142602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환41.png using Guid(8d60efee4b971b24b891af481f142602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7134065848e04bd3da228661973526c') in 0.052352 seconds
+  Import took 0.056093 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000328 seconds.
+  path: Assets/Sprites/Background/anim/화면전환51.png
+  artifactKey: Guid(0a61b6e8b366196428507d022a279736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환51.png using Guid(0a61b6e8b366196428507d022a279736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aac632b8f4fbb16f3e9e33a05bfbaf87') in 0.036121 seconds
+  Import took 0.042354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Sprites/Background/anim/화면전환44.png
+  artifactKey: Guid(5ff87770a7ecd71478a8d62fe6a618d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환44.png using Guid(5ff87770a7ecd71478a8d62fe6a618d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3871f5822c03684cc608b719b17efae') in 0.030359 seconds
+  Import took 0.034337 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Sprites/Background/anim/화면전환40.png
+  artifactKey: Guid(a0e8cb0a5fd6c554093312c911899d52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환40.png using Guid(a0e8cb0a5fd6c554093312c911899d52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94b146623b699d9996c57363a2370aae') in 0.056224 seconds
+  Import took 0.060475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/Sprites/Background/anim/화면전환37.png
+  artifactKey: Guid(34561bba5bfed2b4b9318c20998781a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환37.png using Guid(34561bba5bfed2b4b9318c20998781a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87ced650ab196e142400bad2772a81ac') in 0.033414 seconds
+  Import took 0.038219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/Sprites/Background/anim/화면전환47.png
+  artifactKey: Guid(cfcff18fb97ed3c4aa7e458d65f78007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환47.png using Guid(cfcff18fb97ed3c4aa7e458d65f78007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '953a137a359532778864be48e5524900') in 0.033647 seconds
+  Import took 0.038790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/Sprites/Background/anim/화면전환42.png
+  artifactKey: Guid(187e71e36407d4e419c07a391fb8551f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환42.png using Guid(187e71e36407d4e419c07a391fb8551f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8053346a3edf482c12a75528a423e97') in 0.057720 seconds
+  Import took 0.064177 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Sprites/Background/anim/화면전환25.png
+  artifactKey: Guid(d98d1d4bf2a0ed140b4d8e340a33e1f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환25.png using Guid(d98d1d4bf2a0ed140b4d8e340a33e1f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb9c81cea6976fea1a3cbfa69b99e671') in 0.034389 seconds
+  Import took 0.040725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/Sprites/Background/anim/화면전환36.png
+  artifactKey: Guid(6bf2cc94b7fef5e41b1778ca891ca75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환36.png using Guid(6bf2cc94b7fef5e41b1778ca891ca75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa4db13877c636d9c7300e83fce29672') in 0.050711 seconds
+  Import took 0.055050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/Sprites/Background/anim/화면전환39.png
+  artifactKey: Guid(9f874999a0876794c856b56c18abc609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환39.png using Guid(9f874999a0876794c856b56c18abc609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0f45fbb17a236e8e160524f537569e2') in 0.754303 seconds
+  Import took 0.762367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002143 seconds.
+  path: Assets/Sprites/Background/anim/화면전환46.png
+  artifactKey: Guid(ba6bdaed03fbb4a44a2d401a61bbec0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환46.png using Guid(ba6bdaed03fbb4a44a2d401a61bbec0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3beacd83786bd4a910f82940f9340b46') in 0.046902 seconds
+  Import took 0.052080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000361 seconds.
+  path: Assets/Sprites/Background/anim/화면전환39.png
+  artifactKey: Guid(9f874999a0876794c856b56c18abc609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환39.png using Guid(9f874999a0876794c856b56c18abc609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0f45fbb17a236e8e160524f537569e2') in 0.039827 seconds
+  Import took 0.044571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/Sprites/Background/anim/화면전환56.png
+  artifactKey: Guid(66c27d12325416b4195aa682341751cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환56.png using Guid(66c27d12325416b4195aa682341751cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '669fa94607298c3f1c53509adbf27170') in 0.043027 seconds
+  Import took 0.046949 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Sprites/Background/anim/화면전환32.png
+  artifactKey: Guid(14300f69a62b3b647afe9115e1a8d5ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환32.png using Guid(14300f69a62b3b647afe9115e1a8d5ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe82b6d6bc83ce4cb3436aacea487379') in 0.029124 seconds
+  Import took 0.034265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000346 seconds.
+  path: Assets/Sprites/Background/anim/화면전환30.png
+  artifactKey: Guid(114c5664329957e418fe0bf92cc44918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환30.png using Guid(114c5664329957e418fe0bf92cc44918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81b6f84deba0f949bd08f11ae8fe048d') in 0.031113 seconds
+  Import took 0.035008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000335 seconds.
+  path: Assets/Sprites/Background/anim/화면전환53.png
+  artifactKey: Guid(24cd436ce7a02dc439951445b140d42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환53.png using Guid(24cd436ce7a02dc439951445b140d42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '041542875b6e6da7c1f61f2ee966cca2') in 0.029032 seconds
+  Import took 0.032876 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000365 seconds.
+  path: Assets/Sprites/Background/anim/화면전환52.png
+  artifactKey: Guid(85531c895a244fa45a6a5e3d76e5374f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환52.png using Guid(85531c895a244fa45a6a5e3d76e5374f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21ba79cd2fb7f76a970866961ea539e7') in 0.028305 seconds
+  Import took 0.032524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/Sprites/Background/anim/화면전환57.png
+  artifactKey: Guid(22bab162c5ed8804d814b58d47f7964e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환57.png using Guid(22bab162c5ed8804d814b58d47f7964e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec52d2bd4ca9e818ffe86afe61fded7d') in 0.046138 seconds
+  Import took 0.052005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/Sprites/Background/anim/화면전환26.png
+  artifactKey: Guid(9bfd0726e8b3c414e8c971b871fa812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환26.png using Guid(9bfd0726e8b3c414e8c971b871fa812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd0fb90d58ec27170ce85a58245b978c') in 0.027307 seconds
+  Import took 0.031234 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Sprites/Background/anim/화면전환33.png
+  artifactKey: Guid(ba82170d2f1574c48b2149b704f50fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환33.png using Guid(ba82170d2f1574c48b2149b704f50fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31ad9c4341baae6c7a5ced1e9880e641') in 0.027937 seconds
+  Import took 0.031642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/Sprites/Background/anim/화면전환59.png
+  artifactKey: Guid(100e1a1a6a2821f4fa41b9da2bc4cfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환59.png using Guid(100e1a1a6a2821f4fa41b9da2bc4cfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec616b9a11bdfc8198318010c53c4b84') in 0.061466 seconds
+  Import took 0.067035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000357 seconds.
+  path: Assets/Sprites/Background/anim/화면전환55.png
+  artifactKey: Guid(56b3286623757ea43ace0105e80d629a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환55.png using Guid(56b3286623757ea43ace0105e80d629a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae47810868f69a33b4b2c48bb8723498') in 0.038514 seconds
+  Import took 0.043361 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/Sprites/Background/anim/화면전환54.png
+  artifactKey: Guid(b9964b7e4bb509945bb79b3416d7a982) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환54.png using Guid(b9964b7e4bb509945bb79b3416d7a982) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2838c0a88893f7aa7ddfd099d2e8f010') in 0.033378 seconds
+  Import took 0.037686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/Sprites/Background/anim/화면전환59.png
+  artifactKey: Guid(100e1a1a6a2821f4fa41b9da2bc4cfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환59.png using Guid(100e1a1a6a2821f4fa41b9da2bc4cfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec616b9a11bdfc8198318010c53c4b84') in 0.030509 seconds
+  Import took 0.035301 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/Sprites/Background/anim/화면전환34.png
+  artifactKey: Guid(b41ff59c352a69b48a63162afa263846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환34.png using Guid(b41ff59c352a69b48a63162afa263846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75bdd6c5a713db7f22712d2b0a003a28') in 0.035017 seconds
+  Import took 0.038977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.251216 seconds.
+  path: Assets/Sprites/Background/anim/화면전환11.png
+  artifactKey: Guid(8dd05baf0bcbe584887efa1b1cabe19a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환11.png using Guid(8dd05baf0bcbe584887efa1b1cabe19a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e00d2a1c21b1331d7cbe8cf1b51f41d7') in 0.031578 seconds
+  Import took 0.037775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000376 seconds.
+  path: Assets/Sprites/Background/anim/화면전환19.png
+  artifactKey: Guid(25daf3f05e9033846a155b2173be0d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환19.png using Guid(25daf3f05e9033846a155b2173be0d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5c6fe07902f2cb6389842dddb436cdf') in 0.031132 seconds
+  Import took 0.035925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/Sprites/Background/anim/화면전환10.png
+  artifactKey: Guid(bea59e2664ba3a74183acb480ea773d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환10.png using Guid(bea59e2664ba3a74183acb480ea773d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '368a15a608274777e8320d9711b03837') in 0.032508 seconds
+  Import took 0.037052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000562 seconds.
+  path: Assets/Sprites/Background/anim/화면전환12.png
+  artifactKey: Guid(96ca9b72ae63e064ab7e8b0e5dc80642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환12.png using Guid(96ca9b72ae63e064ab7e8b0e5dc80642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d296bb6334d0882b3859ad318970c49') in 0.033185 seconds
+  Import took 0.040313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/Sprites/Background/anim/화면전환04.png
+  artifactKey: Guid(6ae9f01fd6197434fbd643901e257624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환04.png using Guid(6ae9f01fd6197434fbd643901e257624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4d96908e19da3fa932fe8e00390429a') in 0.031424 seconds
+  Import took 0.035447 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Sprites/Background/anim/화면전환07.png
+  artifactKey: Guid(da361a18d921cf544bf6d90d0782c33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환07.png using Guid(da361a18d921cf544bf6d90d0782c33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f17c6e6af5d2c720c842d7ce2d5ccc96') in 0.040000 seconds
+  Import took 0.044986 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/Sprites/Background/anim/화면전환08.png
+  artifactKey: Guid(aedd1653524e8a848b7a058d5285ddad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환08.png using Guid(aedd1653524e8a848b7a058d5285ddad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69c3beea2fea413fef1a0b6a1b5f5a49') in 0.040781 seconds
+  Import took 0.046665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Assets/Sprites/Background/anim/화면전환15.png
+  artifactKey: Guid(70ab568a462a54847b790d353edf771d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환15.png using Guid(70ab568a462a54847b790d353edf771d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f7a65c1e38144d995ccbf5991ddfbb1') in 0.041563 seconds
+  Import took 0.046293 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/Sprites/Background/anim/화면전환20.png
+  artifactKey: Guid(195dffa5b796a2a469891212b36b4522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환20.png using Guid(195dffa5b796a2a469891212b36b4522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fa0c18dc6695ac3962398b78bf6e32c') in 0.034130 seconds
+  Import took 0.039863 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Sprites/Background/anim/화면전환22.png
+  artifactKey: Guid(eed1fb672b5ebed45be00e86a0136c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환22.png using Guid(eed1fb672b5ebed45be00e86a0136c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2283db162faeb08bf011a94598ba3d2b') in 0.032001 seconds
+  Import took 0.037392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/Sprites/Background/anim/화면전환03.png
+  artifactKey: Guid(5911db5f3bc1770448168c8c6b5a3296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환03.png using Guid(5911db5f3bc1770448168c8c6b5a3296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f508db8c64d4196dcd3973c0441990ff') in 0.048368 seconds
+  Import took 0.052433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/Sprites/Background/anim/화면전환01.png
+  artifactKey: Guid(9441718ea26d80d42a559a73dd55e2a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환01.png using Guid(9441718ea26d80d42a559a73dd55e2a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3ffd5d85e66ca7d5afb8c811ac73e74') in 0.043872 seconds
+  Import took 0.048389 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Sprites/Background/anim/화면전환02.png
+  artifactKey: Guid(9b63a260830fbdc40acbc77a19dae6e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환02.png using Guid(9b63a260830fbdc40acbc77a19dae6e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8dc1901c9f8de5d1dc55fd719c4153e') in 0.041334 seconds
+  Import took 0.045682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/Sprites/Background/anim/화면전환16.png
+  artifactKey: Guid(51d3f467a5009e24a9b150a091fa7f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환16.png using Guid(51d3f467a5009e24a9b150a091fa7f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f1a71ee0745baff7052dd6ebe0f457e') in 0.034814 seconds
+  Import took 0.039681 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/Sprites/Background/anim/화면전환05.png
+  artifactKey: Guid(1a9fbd1cbc3181b439673ec39ae3379d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환05.png using Guid(1a9fbd1cbc3181b439673ec39ae3379d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d82d56c559411f4c9bcd690f0a1cab3') in 0.037353 seconds
+  Import took 0.042349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Sprites/Background/anim/화면전환09.png
+  artifactKey: Guid(d1193aad311f49e4890559dc4707b56a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환09.png using Guid(d1193aad311f49e4890559dc4707b56a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad54241ed10393cac9dcf62f55716c1') in 0.037495 seconds
+  Import took 0.042402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000553 seconds.
+  path: Assets/Sprites/Background/anim/화면전환17.png
+  artifactKey: Guid(9af0a1933db2b7b42a7c6ab33192969d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환17.png using Guid(9af0a1933db2b7b42a7c6ab33192969d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a5ed85910962d443a70ac169e1133be') in 0.039827 seconds
+  Import took 0.045233 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Sprites/Background/anim/화면전환13.png
+  artifactKey: Guid(4f3190c822103ec43a57c2bd7b13f10d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환13.png using Guid(4f3190c822103ec43a57c2bd7b13f10d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04136f0c31b600871a3013a2029f1cc6') in 0.039859 seconds
+  Import took 0.043910 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000355 seconds.
+  path: Assets/Sprites/Background/anim/화면전환14.png
+  artifactKey: Guid(a6e7837627d06ab46b5a9d5495123ceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환14.png using Guid(a6e7837627d06ab46b5a9d5495123ceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6d38793b50e8f9a27a2c29195b9e126') in 0.039232 seconds
+  Import took 0.042838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Sprites/Background/anim/화면전환21.png
+  artifactKey: Guid(2c7096bbfd788b9449fa6be1c6728acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환21.png using Guid(2c7096bbfd788b9449fa6be1c6728acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '036012e49e0e9732cae58deeb8714ff3') in 0.041983 seconds
+  Import took 0.048384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Sprites/Background/anim/화면전환06.png
+  artifactKey: Guid(e76b7683e4fca6240b76a981bac2e895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환06.png using Guid(e76b7683e4fca6240b76a981bac2e895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a87ed4800c2c30ff02a9e98be0945e39') in 0.042376 seconds
+  Import took 0.048144 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/Sprites/Background/anim/화면전환23.png
+  artifactKey: Guid(46a976ebb34c98b4f81a94367ab92043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환23.png using Guid(46a976ebb34c98b4f81a94367ab92043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9fdf611b8da01a274ae42e79a1a22ea') in 0.044152 seconds
+  Import took 0.049926 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/Sprites/Background/anim/화면전환18.png
+  artifactKey: Guid(cfa5b5b24f4464d4bb6ede8fe5d7f220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환18.png using Guid(cfa5b5b24f4464d4bb6ede8fe5d7f220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1276029358f9dd9970bdb6a61895d1e4') in 0.040901 seconds
+  Import took 0.048814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.650702 seconds.
+  path: Assets/Sprites/Background/anim/화면전환00.png
+  artifactKey: Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환00.png using Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa2b391e59fc723990600bb3fe53f37c') in 0.039297 seconds
+  Import took 0.049686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.031879 seconds.
+  path: Assets/Sprites/Background/anim/화면전환00.png
+  artifactKey: Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환00.png using Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c62ba3200585aab576dd3fc6fc897877') in 0.028600 seconds
+  Import took 0.033628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.698843 seconds.
+  path: Assets/Sprites/Background/anim/화면전환00.png
+  artifactKey: Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환00.png using Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df876d33286de46c7f1e30308f490ccb') in 0.018763 seconds
+  Import took 0.024064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009805 seconds.
+  path: Assets/Sprites/Background/anim/화면전환00.png
+  artifactKey: Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환00.png using Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df876d33286de46c7f1e30308f490ccb') in 0.019931 seconds
+  Import took 0.024331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.102476 seconds.
+  path: Assets/Sprites/Background/anim/화면전환00.png
+  artifactKey: Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환00.png using Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03ccd45207d6a686d02f26ccaaa79e2d') in 0.063406 seconds
+  Import took 0.067947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.903964 seconds.
+  path: Assets/Sprites/Background/anim/화면전환00.png
+  artifactKey: Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환00.png using Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20c80f35221155145f35cbabf9a32fec') in 0.037295 seconds
+  Import took 0.041642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.040490 seconds.
+  path: Assets/Sprites/Background/anim/화면전환00.png
+  artifactKey: Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환00.png using Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '624ef0a3894b781f716026b7c8947767') in 0.045248 seconds
+  Import took 0.050890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.152107 seconds.
+  path: Assets/Sprites/Background/anim/화면전환00.png
+  artifactKey: Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환00.png using Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07bd15c0fc8a1251250860829b48f968') in 0.033144 seconds
+  Import took 0.037678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.040628 seconds.
+  path: Assets/Sprites/Background/anim/화면전환00.png
+  artifactKey: Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환00.png using Guid(6e9e589293d690049ab1bd8f6f984392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6cce5741e0ee70bdbdeee440abc4a13') in 0.053976 seconds
+  Import took 0.527743 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 66.472341 seconds.
+  path: Assets/Sprites/Background/anim/화면전환01.png
+  artifactKey: Guid(9441718ea26d80d42a559a73dd55e2a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환01.png using Guid(9441718ea26d80d42a559a73dd55e2a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeaff84854eea9231e86254a8bf0c3a1') in 0.044208 seconds
+  Import took 0.048685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014984 seconds.
+  path: Assets/Sprites/Background/anim/화면전환31.png
+  artifactKey: Guid(9fc6220ee2c305543ae17a9b50c4a177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환31.png using Guid(9fc6220ee2c305543ae17a9b50c4a177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c7184ca8614ca22167555bdcc16b0a9') in 0.038972 seconds
+  Import took 0.044559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001181 seconds.
+  path: Assets/Sprites/Background/anim/화면전환45.png
+  artifactKey: Guid(a0b6fa50b54ddbd44a215b9b07d0e780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환45.png using Guid(a0b6fa50b54ddbd44a215b9b07d0e780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b85da8bbab84e016b4fe50b58be735d6') in 0.039003 seconds
+  Import took 0.044130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Sprites/Background/anim/화면전환43.png
+  artifactKey: Guid(e47286aa09fae574d93d12d80f157d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환43.png using Guid(e47286aa09fae574d93d12d80f157d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '100a9bdee27a1fdb955a57884beb105e') in 0.050727 seconds
+  Import took 0.057712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000369 seconds.
+  path: Assets/Sprites/Background/anim/화면전환58.png
+  artifactKey: Guid(84eeacfb35171e44689ba248ee804e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환58.png using Guid(84eeacfb35171e44689ba248ee804e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '604b135eb6fb33d54949847ead8f67fa') in 0.045689 seconds
+  Import took 0.049645 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Sprites/Background/anim/화면전환38.png
+  artifactKey: Guid(ddf4810d11a20074dad8d180a8dbbd13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환38.png using Guid(ddf4810d11a20074dad8d180a8dbbd13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83984aa20f28565f8ed516c7fe734fd1') in 0.035181 seconds
+  Import took 0.039548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Sprites/Background/anim/화면전환50.png
+  artifactKey: Guid(a8cc4125b060e0547898c06a883ec0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환50.png using Guid(a8cc4125b060e0547898c06a883ec0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb00beb775a73451208eb353ac1d1cde') in 0.032687 seconds
+  Import took 0.038217 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000464 seconds.
+  path: Assets/Sprites/Background/anim/화면전환35.png
+  artifactKey: Guid(7566d4de232d75b48ac91d6dba9312bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환35.png using Guid(7566d4de232d75b48ac91d6dba9312bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e84a762eaea8d368e8236c94c22b6d15') in 0.036439 seconds
+  Import took 0.040392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/Sprites/Background/anim/화면전환49.png
+  artifactKey: Guid(7e81fdee8c063d140b1e5bb3356d8a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환49.png using Guid(7e81fdee8c063d140b1e5bb3356d8a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7842c1b169f26c6787b1fc4569b62bb') in 0.053322 seconds
+  Import took 0.058224 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000323 seconds.
+  path: Assets/Sprites/Background/anim/화면전환48.png
+  artifactKey: Guid(bc15a1e5e75b13949a10aeea797317e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환48.png using Guid(bc15a1e5e75b13949a10aeea797317e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adac5f74ae30c13452e6ed2770fea7e0') in 0.050392 seconds
+  Import took 0.062363 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001706 seconds.
+  path: Assets/Sprites/Background/anim/화면전환51.png
+  artifactKey: Guid(0a61b6e8b366196428507d022a279736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환51.png using Guid(0a61b6e8b366196428507d022a279736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '089a2559c948fd999a6483d820fd9b3b') in 0.036288 seconds
+  Import took 0.050269 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/Sprites/Background/anim/화면전환41.png
+  artifactKey: Guid(8d60efee4b971b24b891af481f142602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환41.png using Guid(8d60efee4b971b24b891af481f142602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b3d03541322ab2a4034048ed3b604c9') in 0.044830 seconds
+  Import took 0.051689 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000423 seconds.
+  path: Assets/Sprites/Background/anim/화면전환44.png
+  artifactKey: Guid(5ff87770a7ecd71478a8d62fe6a618d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환44.png using Guid(5ff87770a7ecd71478a8d62fe6a618d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13067c5c21a0af3f6f870144f73cfa09') in 0.040435 seconds
+  Import took 0.047951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000432 seconds.
+  path: Assets/Sprites/Background/anim/화면전환40.png
+  artifactKey: Guid(a0e8cb0a5fd6c554093312c911899d52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환40.png using Guid(a0e8cb0a5fd6c554093312c911899d52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e74ccbca303e4173294518e8d006a35a') in 0.826422 seconds
+  Import took 0.833567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000548 seconds.
+  path: Assets/Sprites/Background/anim/화면전환37.png
+  artifactKey: Guid(34561bba5bfed2b4b9318c20998781a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환37.png using Guid(34561bba5bfed2b4b9318c20998781a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8edd5166eba18692e5b901e557905fa') in 0.047408 seconds
+  Import took 0.055806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/Sprites/Background/anim/화면전환47.png
+  artifactKey: Guid(cfcff18fb97ed3c4aa7e458d65f78007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환47.png using Guid(cfcff18fb97ed3c4aa7e458d65f78007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d9067034b3c2c83e8129514b59e9ab6') in 0.043127 seconds
+  Import took 0.049104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000357 seconds.
+  path: Assets/Sprites/Background/anim/화면전환42.png
+  artifactKey: Guid(187e71e36407d4e419c07a391fb8551f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환42.png using Guid(187e71e36407d4e419c07a391fb8551f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bfff10f86f15d1213b9ee247b608368') in 0.040797 seconds
+  Import took 0.046888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000368 seconds.
+  path: Assets/Sprites/Background/anim/화면전환36.png
+  artifactKey: Guid(6bf2cc94b7fef5e41b1778ca891ca75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환36.png using Guid(6bf2cc94b7fef5e41b1778ca891ca75b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97752f6ddda879ca353c87939569818c') in 0.046640 seconds
+  Import took 0.051869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Sprites/Background/anim/화면전환39.png
+  artifactKey: Guid(9f874999a0876794c856b56c18abc609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환39.png using Guid(9f874999a0876794c856b56c18abc609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6564f671f5cff2386191f62ec28e3c8c') in 0.037185 seconds
+  Import took 0.043533 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000368 seconds.
+  path: Assets/Sprites/Background/anim/화면전환57.png
+  artifactKey: Guid(22bab162c5ed8804d814b58d47f7964e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환57.png using Guid(22bab162c5ed8804d814b58d47f7964e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69fc87356a58e490e4de3d6f56e10325') in 0.042100 seconds
+  Import took 0.049038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000323 seconds.
+  path: Assets/Sprites/Background/anim/화면전환46.png
+  artifactKey: Guid(ba6bdaed03fbb4a44a2d401a61bbec0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환46.png using Guid(ba6bdaed03fbb4a44a2d401a61bbec0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d2ad7b842c091d8a5e46fcc74545755') in 0.049865 seconds
+  Import took 0.054473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000319 seconds.
+  path: Assets/Sprites/Background/anim/화면전환56.png
+  artifactKey: Guid(66c27d12325416b4195aa682341751cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환56.png using Guid(66c27d12325416b4195aa682341751cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b082c6f4055ed964f28309235e28e500') in 0.048264 seconds
+  Import took 0.054529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000402 seconds.
+  path: Assets/Sprites/Background/anim/화면전환32.png
+  artifactKey: Guid(14300f69a62b3b647afe9115e1a8d5ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환32.png using Guid(14300f69a62b3b647afe9115e1a8d5ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d4b3fca027d1e09786428b58ab9f558') in 0.039523 seconds
+  Import took 0.045744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000310 seconds.
+  path: Assets/Sprites/Background/anim/화면전환53.png
+  artifactKey: Guid(24cd436ce7a02dc439951445b140d42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환53.png using Guid(24cd436ce7a02dc439951445b140d42c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca73d7e5faff22431cd89fcb00af2f26') in 0.039258 seconds
+  Import took 0.044408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/Sprites/Background/anim/화면전환52.png
+  artifactKey: Guid(85531c895a244fa45a6a5e3d76e5374f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환52.png using Guid(85531c895a244fa45a6a5e3d76e5374f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c7a7085eb829c8c505de20a59056739') in 0.036330 seconds
+  Import took 0.041272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Sprites/Background/anim/화면전환33.png
+  artifactKey: Guid(ba82170d2f1574c48b2149b704f50fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환33.png using Guid(ba82170d2f1574c48b2149b704f50fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a969dc6632a7433da99ec04c79608005') in 0.038095 seconds
+  Import took 0.042902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/Sprites/Background/anim/화면전환59.png
+  artifactKey: Guid(100e1a1a6a2821f4fa41b9da2bc4cfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환59.png using Guid(100e1a1a6a2821f4fa41b9da2bc4cfb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aa6d8e9e5db7c1ef6c2cae939fbc9d0') in 0.049026 seconds
+  Import took 0.053601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Sprites/Background/anim/화면전환55.png
+  artifactKey: Guid(56b3286623757ea43ace0105e80d629a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환55.png using Guid(56b3286623757ea43ace0105e80d629a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06ab668094f0b1e164f9b1c5286ecbfa') in 0.032305 seconds
+  Import took 0.036941 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/Sprites/Background/anim/화면전환54.png
+  artifactKey: Guid(b9964b7e4bb509945bb79b3416d7a982) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환54.png using Guid(b9964b7e4bb509945bb79b3416d7a982) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27281ca99ed3726f11eb09363472cefb') in 0.038258 seconds
+  Import took 0.043385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000496 seconds.
+  path: Assets/Sprites/Background/anim/화면전환34.png
+  artifactKey: Guid(b41ff59c352a69b48a63162afa263846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환34.png using Guid(b41ff59c352a69b48a63162afa263846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f913bb3569a84909a81ccb1b7c32334e') in 0.050137 seconds
+  Import took 0.054262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003402 seconds.
+  path: Assets/Sprites/Background/anim/화면전환54.png
+  artifactKey: Guid(b9964b7e4bb509945bb79b3416d7a982) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환54.png using Guid(b9964b7e4bb509945bb79b3416d7a982) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27281ca99ed3726f11eb09363472cefb') in 0.037227 seconds
+  Import took 0.042648 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.053317 seconds.
+Registered in 0.204329 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.15 ms, found 1 plugins.
@@ -186,18 +1593,329 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.556 seconds
+- Completed reload, in  2.453 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1982 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.8 MB.
-System memory in use after: 94.8 MB.
+System memory in use before: 98.0 MB.
+System memory in use after: 98.0 MB.
 
-Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2424.
-Total: 4.300900 ms (FindLiveObjects: 0.456800 ms CreateObjectMapping: 0.192200 ms MarkObjects: 3.405600 ms  DeleteObjects: 0.244100 ms)
+Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2445.
+Total: 3.043900 ms (FindLiveObjects: 0.279400 ms CreateObjectMapping: 0.102400 ms MarkObjects: 2.102500 ms  DeleteObjects: 0.558400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 35.479850 seconds.
+  path: Assets/Scenes/MainScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4535b7607cf1394d2b2dff735406b01e') in 0.028779 seconds
+  Import took 0.033937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.465181 seconds.
+  path: Assets/Sprites/Background/anim/화면전환02.png
+  artifactKey: Guid(9b63a260830fbdc40acbc77a19dae6e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환02.png using Guid(9b63a260830fbdc40acbc77a19dae6e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56be400d3b266eb25602c2d600102cf0') in 0.086274 seconds
+  Import took 0.098399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000405 seconds.
+  path: Assets/Sprites/Background/anim/화면전환11.png
+  artifactKey: Guid(8dd05baf0bcbe584887efa1b1cabe19a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환11.png using Guid(8dd05baf0bcbe584887efa1b1cabe19a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47f5704634661352824f838603aa6ed1') in 0.055445 seconds
+  Import took 0.063137 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000353 seconds.
+  path: Assets/Sprites/Background/anim/화면전환19.png
+  artifactKey: Guid(25daf3f05e9033846a155b2173be0d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환19.png using Guid(25daf3f05e9033846a155b2173be0d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13af8963e6135af26c1a0f0005e6dcdb') in 0.910565 seconds
+  Import took 0.916521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000583 seconds.
+  path: Assets/Sprites/Background/anim/화면전환28.png
+  artifactKey: Guid(d45bbf967bdfd61488d24596dd73e883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환28.png using Guid(d45bbf967bdfd61488d24596dd73e883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2f7ee296b901f44856e184fbc005446') in 0.043576 seconds
+  Import took 0.049683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000605 seconds.
+  path: Assets/Sprites/Background/anim/화면전환10.png
+  artifactKey: Guid(bea59e2664ba3a74183acb480ea773d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환10.png using Guid(bea59e2664ba3a74183acb480ea773d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7f7d61e8e23eb3d0d574bc6cda529f9') in 0.043369 seconds
+  Import took 0.048659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000783 seconds.
+  path: Assets/Sprites/Background/anim/화면전환12.png
+  artifactKey: Guid(96ca9b72ae63e064ab7e8b0e5dc80642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환12.png using Guid(96ca9b72ae63e064ab7e8b0e5dc80642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41969b797c79beab821b74e3f01c89bd') in 0.054721 seconds
+  Import took 0.059508 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/Sprites/Background/anim/화면전환29.png
+  artifactKey: Guid(ab9a423b7193bbe4ea7d8f5a71b131ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환29.png using Guid(ab9a423b7193bbe4ea7d8f5a71b131ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '940d2d6006ee8c37b92f022bbcf70e5b') in 0.047463 seconds
+  Import took 0.053186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/Sprites/Background/anim/화면전환04.png
+  artifactKey: Guid(6ae9f01fd6197434fbd643901e257624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환04.png using Guid(6ae9f01fd6197434fbd643901e257624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ce430ad0ce7e9bb38204076bfc1542c') in 0.040967 seconds
+  Import took 0.046262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000337 seconds.
+  path: Assets/Sprites/Background/anim/화면전환07.png
+  artifactKey: Guid(da361a18d921cf544bf6d90d0782c33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환07.png using Guid(da361a18d921cf544bf6d90d0782c33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd34a3bf8b0fd9600cd9c2a987f7c51db') in 0.047726 seconds
+  Import took 0.051845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/Sprites/Background/anim/화면전환08.png
+  artifactKey: Guid(aedd1653524e8a848b7a058d5285ddad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환08.png using Guid(aedd1653524e8a848b7a058d5285ddad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eabebff0de20e3fb93fe77e7b853caa') in 0.058324 seconds
+  Import took 0.066832 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/Sprites/Background/anim/화면전환24.png
+  artifactKey: Guid(b6ab5cd247c8a3541a54469af31cc624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환24.png using Guid(b6ab5cd247c8a3541a54469af31cc624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e50779fade43afd0f61fdffc6f390983') in 0.057643 seconds
+  Import took 0.065266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/Sprites/Background/anim/화면전환15.png
+  artifactKey: Guid(70ab568a462a54847b790d353edf771d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환15.png using Guid(70ab568a462a54847b790d353edf771d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02ae7296c5161a2e4de0ae971b25ee71') in 0.056477 seconds
+  Import took 0.063632 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000357 seconds.
+  path: Assets/Sprites/Background/anim/화면전환20.png
+  artifactKey: Guid(195dffa5b796a2a469891212b36b4522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환20.png using Guid(195dffa5b796a2a469891212b36b4522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31441aaa00725b4169c53c515de30f87') in 0.058166 seconds
+  Import took 0.065065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/Sprites/Background/anim/화면전환22.png
+  artifactKey: Guid(eed1fb672b5ebed45be00e86a0136c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환22.png using Guid(eed1fb672b5ebed45be00e86a0136c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b6cb3fc50c96ac419d5d05d8a5e573d') in 0.045210 seconds
+  Import took 0.049363 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000366 seconds.
+  path: Assets/Sprites/Background/anim/화면전환27.png
+  artifactKey: Guid(5742f833ee99856419c83aee4c08e678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환27.png using Guid(5742f833ee99856419c83aee4c08e678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87bc3710ffcf8d08cf123a23c44bcc65') in 0.039720 seconds
+  Import took 0.044805 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Sprites/Background/anim/화면전환03.png
+  artifactKey: Guid(5911db5f3bc1770448168c8c6b5a3296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환03.png using Guid(5911db5f3bc1770448168c8c6b5a3296) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3be0e1926ab303edf4ad388e87db8b1b') in 0.040137 seconds
+  Import took 0.046259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000418 seconds.
+  path: Assets/Sprites/Background/anim/화면전환16.png
+  artifactKey: Guid(51d3f467a5009e24a9b150a091fa7f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환16.png using Guid(51d3f467a5009e24a9b150a091fa7f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '497b9be6f7103e051ea07e01759d9619') in 0.039718 seconds
+  Import took 0.045244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000385 seconds.
+  path: Assets/Sprites/Background/anim/화면전환05.png
+  artifactKey: Guid(1a9fbd1cbc3181b439673ec39ae3379d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환05.png using Guid(1a9fbd1cbc3181b439673ec39ae3379d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7be441b7898d5e8263202eb4cfe4f060') in 0.061330 seconds
+  Import took 0.074723 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000815 seconds.
+  path: Assets/Sprites/Background/anim/화면전환25.png
+  artifactKey: Guid(d98d1d4bf2a0ed140b4d8e340a33e1f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환25.png using Guid(d98d1d4bf2a0ed140b4d8e340a33e1f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '406adf19b23c95b68f102e1bbf456cb3') in 0.067273 seconds
+  Import took 0.078002 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001397 seconds.
+  path: Assets/Sprites/Background/anim/화면전환09.png
+  artifactKey: Guid(d1193aad311f49e4890559dc4707b56a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환09.png using Guid(d1193aad311f49e4890559dc4707b56a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df4d14dcb06de75a8594c0c51858871a') in 0.074382 seconds
+  Import took 0.087382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000885 seconds.
+  path: Assets/Sprites/Background/anim/화면전환30.png
+  artifactKey: Guid(114c5664329957e418fe0bf92cc44918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환30.png using Guid(114c5664329957e418fe0bf92cc44918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2501468dbd1c7336032a52ebc086b698') in 0.082349 seconds
+  Import took 0.097660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000369 seconds.
+  path: Assets/Sprites/Background/anim/화면전환17.png
+  artifactKey: Guid(9af0a1933db2b7b42a7c6ab33192969d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환17.png using Guid(9af0a1933db2b7b42a7c6ab33192969d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4da1b49ce50a18a3750f16d3490500f2') in 0.065633 seconds
+  Import took 0.071511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000370 seconds.
+  path: Assets/Sprites/Background/anim/화면전환13.png
+  artifactKey: Guid(4f3190c822103ec43a57c2bd7b13f10d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환13.png using Guid(4f3190c822103ec43a57c2bd7b13f10d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e530e100e5dd4010bbe2d8d95b0a3f8') in 0.071264 seconds
+  Import took 0.077267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000415 seconds.
+  path: Assets/Sprites/Background/anim/화면전환14.png
+  artifactKey: Guid(a6e7837627d06ab46b5a9d5495123ceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환14.png using Guid(a6e7837627d06ab46b5a9d5495123ceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '570e839a4705b412be2dbd71cd76b038') in 0.052475 seconds
+  Import took 0.058714 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001281 seconds.
+  path: Assets/Sprites/Background/anim/화면전환26.png
+  artifactKey: Guid(9bfd0726e8b3c414e8c971b871fa812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환26.png using Guid(9bfd0726e8b3c414e8c971b871fa812f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b5a9b1dfcf0881c18ba3ebf37307f83') in 0.045429 seconds
+  Import took 0.052636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/Sprites/Background/anim/화면전환06.png
+  artifactKey: Guid(e76b7683e4fca6240b76a981bac2e895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환06.png using Guid(e76b7683e4fca6240b76a981bac2e895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f22aa7c9f37146151260f9cfa5ae688') in 0.053414 seconds
+  Import took 0.058551 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000339 seconds.
+  path: Assets/Sprites/Background/anim/화면전환21.png
+  artifactKey: Guid(2c7096bbfd788b9449fa6be1c6728acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환21.png using Guid(2c7096bbfd788b9449fa6be1c6728acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68af7a13d5e5787bf8a61db800b067f9') in 0.042507 seconds
+  Import took 0.048458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/Sprites/Background/anim/화면전환23.png
+  artifactKey: Guid(46a976ebb34c98b4f81a94367ab92043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환23.png using Guid(46a976ebb34c98b4f81a94367ab92043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc60f1a704d96ab48babd891b09da40d') in 0.047160 seconds
+  Import took 0.052712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000406 seconds.
+  path: Assets/Sprites/Background/anim/화면전환00.controller
+  artifactKey: Guid(5252f9732b6851b478289a98e5f0b26d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환00.controller using Guid(5252f9732b6851b478289a98e5f0b26d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3592fde7ddb31b71406e7fcde7e6a9a') in 0.023251 seconds
+  Import took 0.030829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000445 seconds.
+  path: Assets/Sprites/Background/anim/화면전환18.png
+  artifactKey: Guid(cfa5b5b24f4464d4bb6ede8fe5d7f220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Background/anim/화면전환18.png using Guid(cfa5b5b24f4464d4bb6ede8fe5d7f220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e3242784dfcb6ab266e22c4da1a1041') in 0.050786 seconds
+  Import took 0.057706 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012924 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.368 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1982 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.1 MB.
+System memory in use after: 98.1 MB.
+
+Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2450.
+Total: 2.698600 ms (FindLiveObjects: 0.399600 ms CreateObjectMapping: 0.121900 ms MarkObjects: 2.023600 ms  DeleteObjects: 0.151700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016251 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.082 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.10 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1982 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.1 MB.
+System memory in use after: 98.1 MB.
+
+Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 2454.
+Total: 3.647900 ms (FindLiveObjects: 0.347700 ms CreateObjectMapping: 0.141400 ms MarkObjects: 2.985400 ms  DeleteObjects: 0.171400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 45.80 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 69 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.5 MB.
+System memory in use after: 60.5 MB.
+
+Unloading 69 unused Assets to reduce memory usage. Loaded Objects now: 2454.
+Total: 7.586000 ms (FindLiveObjects: 1.820500 ms CreateObjectMapping: 0.562500 ms MarkObjects: 4.881100 ms  DeleteObjects: 0.319000 ms)
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -13,6 +13,8 @@ public class MainSceneManager : MonoBehaviour
     [SerializeField]
     ModuleManager moduleManager;
     [SerializeField]
+    GameObject backGroundAnim;
+    [SerializeField]
     PostProcessVolume effectVolume;
     [SerializeField]
     GameObject parentAngryPostProcess;
@@ -119,14 +121,18 @@ public class MainSceneManager : MonoBehaviour
     {
         parentAngryPostProcess.SetActive(true);
         StartCoroutine(moduleManager.VolumeModule(effectVolume, true, 1));
-        for (int i = 0; i < 5; i++)
-        {
-            background.GetComponent<SpriteRenderer>().sprite = backgroundAfter;
-            yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
-            background.GetComponent<SpriteRenderer>().sprite = originBackGround;
-            yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
-        }
+        backGroundAnim.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    background.GetComponent<SpriteRenderer>().sprite = backgroundAfter;
+        //    yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
+        //    background.GetComponent<SpriteRenderer>().sprite = originBackGround;
+        //    yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
+        //}
+        
         background.GetComponent<SpriteRenderer>().sprite = backgroundAfter;
+        backGroundAnim.SetActive(false);
 
     }
 
